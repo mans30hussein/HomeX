@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:home_x/features/onbourding/ui/onboarding.dart';
 import 'package:home_x/features/splash/splash_screen.dart';
 
+import 'core/routing/const_routs.dart';
+import 'core/routing/router.dart';
 import 'features/home.dart';
 
 void main() async{
@@ -21,11 +23,9 @@ class MyApp extends StatelessWidget {
       
       theme: ThemeData(),
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
-      routes: {
-        SplashScreen.routName : (context) => SplashScreen(),
-        OnbourdingScreen.routName : (context) => OnbourdingScreen(),
-      },
+    
+      initialRoute: Routs.routOptionsLoginScreen,
+      onGenerateRoute:SpatailRouter.generateRouts ,
     );
   }
 }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:home_x/core/util/colors.dart';
 import 'package:home_x/features/onbourding/logic/onbourding_model.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -41,7 +40,8 @@ class _OnbourdingItemState extends State<OnbourdingItem> {
             style:
                 const TextStyle(fontSize: 20, overflow: TextOverflow.clip),
           ),
-          //const Spacer(),
+          const Spacer(),
+          SmoothPageIndicator(controller:bourdController , count: 3)
         
         ],
         
