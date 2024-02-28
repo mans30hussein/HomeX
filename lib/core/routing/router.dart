@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:home_x/features/autharization/lgoin/ui/login_options.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:home_x/features/autharization/Screens/lgoin/ui/login_options.dart';
+import 'package:home_x/features/autharization/Screens/lgoin/ui/login_screen.dart';
+import 'package:home_x/features/autharization/Screens/register/ui/register.dart';
+import 'package:home_x/features/home/home.dart';
 import 'package:home_x/features/onbourding/ui/onboarding.dart';
 import 'package:home_x/features/splash/splash_screen.dart';
 
@@ -14,11 +18,17 @@ class SpatailRouter {
         return MaterialPageRoute(builder: (_) => const OnbourdingScreen());
       case Routs.routOptionsLoginScreen:
         return MaterialPageRoute(builder: (_) => const LoginOptions());
+      case Routs.routLoginScreen:
+        return MaterialPageRoute(
+          builder: (_) => LoginScreen(),
+        );
+
+      case Routs.routRegisterScreen:
+        return MaterialPageRoute(builder: (_) => RegisterScreen());
+      case Routs.routHomeScreen:
+        return MaterialPageRoute(builder: (_) => Home());
       default:
         return MaterialPageRoute(builder: (_) => const LoginOptions());
-        
     }
-
-   
   }
 }

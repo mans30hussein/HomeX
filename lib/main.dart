@@ -1,15 +1,25 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:home_x/features/onbourding/ui/onboarding.dart';
-import 'package:home_x/features/splash/splash_screen.dart';
-
 import 'core/routing/const_routs.dart';
 import 'core/routing/router.dart';
-import 'features/home.dart';
+import 'firebase_options.dart';
 
-void main() async{
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
+  // FirebaseAuth.instance.authStateChanges().listen((User? user){
+  //   if(user == null){
+  //      print('User is currently signed out!');
+  //   }
+  //   else{
+  //      print('User is currently signed in!');
+  //   }
+  // });
+
   runApp(const MyApp());
 }
 
@@ -20,12 +30,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      
       theme: ThemeData(),
       debugShowCheckedModeBanner: false,
-    
       initialRoute: Routs.routOptionsLoginScreen,
-      onGenerateRoute:SpatailRouter.generateRouts ,
+      onGenerateRoute: SpatailRouter.generateRouts,
     );
   }
 }
