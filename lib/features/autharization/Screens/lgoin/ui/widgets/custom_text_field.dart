@@ -26,10 +26,10 @@ Widget CustomTextFormField({
       decoration: InputDecoration(
         
         filled: true,
-        fillColor: Colors.white,
+        fillColor: Color(0xffFFFFFF),
         hintText: hintText,
         enabled: true,
-        constraints: BoxConstraints(maxWidth: 330, maxHeight: double.infinity),
+        constraints:const BoxConstraints(maxWidth: 330, maxHeight: double.infinity),
         labelStyle: StylesApp.labelText,
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(20) ,),
         prefixIcon: prefixIcon,

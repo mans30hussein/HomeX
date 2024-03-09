@@ -3,14 +3,14 @@ import 'package:home_x/core/util/styles.dart';
 
 class CustomMaterialBottons extends StatelessWidget {
   CustomMaterialBottons({
-    required this.backgroundBottonsColors,
+     this.backgroundBottonsColors,
     
     required this.onPressed,
     required this.text,
     super.key,
   });
   Function() onPressed;
-  Color backgroundBottonsColors;
+  Color? backgroundBottonsColors;
   
   String text;
 

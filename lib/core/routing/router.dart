@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:get_it/get_it.dart';
 import 'package:home_x/core/services/services_locator.dart';
 import 'package:home_x/features/autharization/Screens/forget_password/forget_password_screen.dart';
 import 'package:home_x/features/autharization/date/auth_forget_password/auth_cubit.dart';
@@ -10,6 +9,8 @@ import 'package:home_x/features/autharization/Screens/lgoin/ui/login_screen.dart
 import 'package:home_x/features/autharization/date/auth_register/auth_register_cubit.dart';
 import 'package:home_x/features/autharization/Screens/register/ui/register.dart';
 import 'package:home_x/features/home/home.dart';
+import 'package:home_x/features/onbourding/ui/onboarding_screen.dart';
+import 'package:home_x/features/splash/splash_screen.dart';
 
 import 'const_routs.dart';
 
@@ -18,7 +19,10 @@ class SpatailRouter {
     switch (settings.name) {
 /////////////////////////////// Splash and Onbourding Screen ////////////////////////////////////////////////
       
-    
+      case Routs.routSplashScreen:
+        return MaterialPageRoute(builder: (_) => const SplashScreen());
+      case Routs.routOnbourdingScreen:
+        return MaterialPageRoute(builder: (_) => const OnbourdingScreen()); 
 ///////////////////////////// Login and Register //////////////////////////////////////////////////
       case Routs.routOptionsLoginScreen:
         return MaterialPageRoute(builder: (_) => BlocProvider<AppLoginCubit>(

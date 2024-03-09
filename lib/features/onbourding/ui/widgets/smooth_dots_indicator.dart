@@ -16,11 +16,11 @@ class SmoothDotsIndicator extends StatelessWidget {
     return SmoothPageIndicator(
       controller: controller,
       count: count,
-      effect: const ExpandingDotsEffect(
+      effect:  ExpandingDotsEffect(
         dotWidth: 8,
         dotHeight: 7,
-        activeDotColor: Colors.black,
-        dotColor: Colors.black,
+        activeDotColor:const Color(0xff8B78FF),
+        dotColor: Colors.black.withOpacity(.7)
       ),
     );
   }

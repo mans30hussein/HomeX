@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:home_x/core/util/app_text_styles.dart';
+import 'package:home_x/core/util/styles.dart';
 import 'package:home_x/features/onbourding/data/onbourding_model.dart';
 import 'package:home_x/features/onbourding/ui/widgets/custom_text.dart';
 import 'package:home_x/features/onbourding/ui/widgets/get_buttons.dart';
@@ -43,7 +43,7 @@ class _OnbourdingContainerState extends State<OnbourdingContainer> {
               children: [
                 CustomText(
                   text: widget.onBoardingModel.title,
-                  style: TextStyles.K2DStyle.copyWith(
+                  style: StylesApp.K2DStyle.copyWith(
                     fontFamily: "K2DBold",
                     fontSize: 18,
                   ),
@@ -61,13 +61,13 @@ class _OnbourdingContainerState extends State<OnbourdingContainer> {
                 height: 100,
                 child: CustomText(
                   text: widget.onBoardingModel.subTitle1,
-                  style: TextStyles.K2DStyle,
+                  style: StylesApp.K2DStyle,
                 )),
             SizedBox(
                 height: 100,
                 child: CustomText(
                   text: widget.onBoardingModel.subTitle2,
-                  style: TextStyles.K2DStyle,
+                  style: StylesApp.K2DStyle,
                 )),
             GetButtons(
               curindx: widget.curindx,

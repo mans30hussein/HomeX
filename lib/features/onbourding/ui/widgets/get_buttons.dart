@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:home_x/core/routing/const_routs.dart';
+import 'package:home_x/core/services/services_locator.dart';
 import 'package:home_x/core/util/app_strings.dart';
-import 'package:home_x/core/util/app_text_styles.dart';
 import 'package:home_x/core/util/colors.dart';
-import 'package:home_x/data/services/cache_helper.dart';
+import 'package:home_x/core/shared_preference/cache_helper.dart';
+import 'package:home_x/core/util/styles.dart';
 import 'package:home_x/features/onbourding/data/onbourding_model.dart';
 import 'package:home_x/features/onbourding/ui/widgets/custom_gester_detector_text.dart';
-import 'package:home_x/services/service_lockator.dart';
 
 class GetButtons extends StatefulWidget {
   const GetButtons(
@@ -25,24 +26,24 @@ class _GetButtonsState extends State<GetButtons> {
         text: AppStrings.getStarted,
         ontap: () {
           getIt<CacheHelper>().saveData(key: "onBoardingvisited", value: true);
+          Navigator.pushNamed(context, Routs.routLoginScreen);
         },
-        style: TextStyles.K2DStyle.copyWith(
-          color: AppColors.backgroundOnbourdingScreen,
+        style: StylesApp.K2DStyle.copyWith(
+          color: AppColors.primaryColors,
         ),
-        arrowColor: AppColors.backgroundOnbourdingScreen,
+        arrowColor: AppColors.primaryColors,
       );
     } else {
       return CustomGesterDetectorText(
         text: AppStrings.continueText,
         ontap: () {
-
           widget.controller.nextPage(
             duration: const Duration(milliseconds: 300),
             curve: Curves.bounceIn,
           );
           // print(widget.curindx);
         },
-        style: TextStyles.K2DStyle.copyWith(fontSize: 16),
+        style: StylesApp.K2DStyle.copyWith(fontSize: 16),
       );
     }
   }

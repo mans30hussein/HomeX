@@ -8,7 +8,8 @@ import 'package:home_x/features/autharization/Screens/lgoin/ui/widgets/custom_te
 import 'add_text_bottons_forget_password.dart';
 import 'add_text_have_acount_or_not.dart';
 
-class RefactorCustomTextFormFieldAndAddValidationsInLoginScreen extends StatelessWidget {
+class RefactorCustomTextFormFieldAndAddValidationsInLoginScreen
+    extends StatelessWidget {
   RefactorCustomTextFormFieldAndAddValidationsInLoginScreen({super.key});
   String? email;
   String? password;
@@ -19,6 +20,7 @@ class RefactorCustomTextFormFieldAndAddValidationsInLoginScreen extends Stateles
     return Form(
       key: formKey,
       child: Column(
+        
         children: [
           CustomTextFormField(
             onChange: (date) {
@@ -63,25 +65,26 @@ class RefactorCustomTextFormFieldAndAddValidationsInLoginScreen extends Stateles
             },
             //controller: TextEditingController(),
           ),
-         const AddTextBottonForgetPassword(),
           const SizedBox(
             height: 40,
           ),
-          CustomMaterialBottons(
-              backgroundBottonsColors: backgroundOnbourdingScreen,
+          Padding(
+            padding: const EdgeInsets.only(right: 20),
+            child: CustomMaterialBottons(
+              backgroundBottonsColors: AppColors.primaryColors,
               onPressed: () async {
                 if (formKey.currentState!.validate()) {
                   BlocProvider.of<AppLoginCubit>(context)
                       .userLogin(email: email!, password: password!);
                 } else {}
               },
-              text: 'Log In'),
-         const AddTextHaveAcountOrNot(),
+              text: 'Log In',
+            ),
+          ),
+       
+         const Center(child:  AddTextBottonForgetPassword()),
         ],
       ),
     );
   }
 }
-
-
-

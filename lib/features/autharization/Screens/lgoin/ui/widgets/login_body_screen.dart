@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:home_x/core/util/assets.dart';
-import 'package:home_x/core/widgets/custom_material_bottons.dart';
+import 'package:home_x/core/routing/const_routs.dart';
 import 'package:home_x/features/autharization/Screens/lgoin/ui/widgets/add_text_login_title.dart';
 import 'package:home_x/features/autharization/Screens/lgoin/ui/widgets/refactor_custom_text_form_field.dart';
+import 'add_text_have_acount_or_not.dart';
 
 class LoginBodyScreen extends StatelessWidget {
-  const LoginBodyScreen({
+   LoginBodyScreen({
     super.key,
   });
 
@@ -17,24 +17,26 @@ class LoginBodyScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          SizedBox(
+            height: 100,
+          ),
+          // Image.asset(Assets.logoApp),
           const AddTextLoginTitle(),
           const SizedBox(
             height: 30,
           ),
           RefactorCustomTextFormFieldAndAddValidationsInLoginScreen(),
           const SizedBox(
-            height: 50,
+            height: 60,
+          ),     
+           AddTextHaveAcountOrNot(
+          onPressed: () {
+            Navigator.pushNamed(context, Routs.routRegisterScreen);
+          },
+            text1: " Don't have acount ?",
+            text2: "Sign Up",
           ),
-          ElevatedButton(
-              onPressed: () {},
-              child:  Row(
-                children: [
-                  const Text("Login with google"),
-
-                  Image.asset(googleImage , height: 50,width: 50, ),
-                  ],
-
-              )),
+           
         ],
       ),
     );

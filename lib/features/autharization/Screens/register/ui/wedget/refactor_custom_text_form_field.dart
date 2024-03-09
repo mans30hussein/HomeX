@@ -74,7 +74,7 @@ class RefactorCustomTextFormFieldAndAddValidationInRegisterScreen
             height: 50,
           ),
           CustomMaterialBottons(
-              backgroundBottonsColors: backgroundOnbourdingScreen,
+              backgroundBottonsColors: AppColors.primaryColors,
               onPressed: () async {
                 if (formKey.currentState!.validate()) {
                   BlocProvider.of<AppRegisterCubit>(context)

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:home_x/core/util/app_text_styles.dart';
 import 'package:home_x/core/util/colors.dart';
+import 'package:home_x/core/util/styles.dart';
 
 class CustomGesterDetectorText extends StatelessWidget {
   const CustomGesterDetectorText({
@@ -22,7 +22,7 @@ class CustomGesterDetectorText extends StatelessWidget {
         children: [
           Text(
             text,
-            style: style ?? TextStyles.K2DStyle,
+            style: style ?? StylesApp.K2DStyle,
           ),
            Icon(
             Icons.arrow_forward,

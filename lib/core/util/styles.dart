@@ -1,9 +1,10 @@
 import 'package:flutter/widgets.dart';
+import 'package:home_x/core/util/colors.dart';
 import 'package:home_x/core/util/fonts.dart';
 
 class StylesApp {
   static const TextStyle loginTitle = TextStyle(
-      fontSize: 24,
+      fontSize: 30,
       fontWeight: FontWieghtHelper.semi_bold,
       fontFamily: 'K2D',
       color: Color(0xff373737));
@@ -19,10 +20,21 @@ class StylesApp {
       color: Color(0xff868686));
  // static Color? textColor;
   static const TextStyle styleBotton = TextStyle(
-      fontSize: 16,
+      fontSize: 20,
       fontWeight: FontWieghtHelper.mediam,
       fontFamily: 'K2D',
       color: Color(0xffFFFFFF));
+       static const TextStyle styleForgetPassword = TextStyle(
+      fontSize: 16,
+      fontWeight: FontWieghtHelper.mediam,
+      fontFamily: 'K2D',
+      color: AppColors.primaryColors);
 
-  
+
+  static const K2DStyle =  TextStyle(
+    color: AppColors.gray,
+    fontSize: 15,
+    fontFamily: "K2DRegular",
+    fontWeight: FontWeight.w500,
+  );
 }
