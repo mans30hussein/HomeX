@@ -35,11 +35,17 @@ void delayedNavigate(context) {
     ),
     () {
       bool onBoardingvisited =
-          getIt<CacheHelper>().getData(key: "onBoardingvisited") ?? false;
-      if (onBoardingvisited) {
-        Navigator.pushNamed(context, Routs.routLoginScreen);
+              getIt<CacheHelper>().getData(key: "onBoardingvisited") ?? false,
+          homeVisited =
+              getIt<CacheHelper>().getData(key: "homeVisited") ?? false;
+      if (homeVisited) {
+        Navigator.pushNamed(context, Routs.routHomeScreen);
       } else {
-         Navigator.pushNamed(context, Routs.routOnbourdingScreen);
+        if (onBoardingvisited) {
+          Navigator.pushNamed(context, Routs.routLoginScreen);
+        } else {
+          Navigator.pushNamed(context, Routs.routOnbourdingScreen);
+        }
       }
     },
   );

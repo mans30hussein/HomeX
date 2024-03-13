@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:home_x/core/services/services_locator.dart';
+import 'package:home_x/core/shared_preference/cache_helper.dart';
 import 'package:home_x/core/util/colors.dart';
 import 'package:home_x/core/widgets/custom_material_bottons.dart';
 import 'package:home_x/features/autharization/Screens/lgoin/ui/widgets/custom_text_field.dart';
@@ -76,9 +78,12 @@ class RefactorCustomTextFormFieldAndAddValidationInRegisterScreen
           CustomMaterialBottons(
               backgroundBottonsColors: AppColors.primaryColors,
               onPressed: () async {
+                
                 if (formKey.currentState!.validate()) {
                   BlocProvider.of<AppRegisterCubit>(context)
                       .userRegister(email: email!, password: password!);
+                      getIt<CacheHelper>()
+                      .saveData(key: "homeVisited", value: true);
                 }
               },
               text: 'Sign Up'),

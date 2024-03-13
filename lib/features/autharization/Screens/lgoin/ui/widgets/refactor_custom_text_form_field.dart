@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:home_x/core/services/services_locator.dart';
+import 'package:home_x/core/shared_preference/cache_helper.dart';
 import 'package:home_x/core/util/colors.dart';
 import 'package:home_x/core/widgets/custom_material_bottons.dart';
 import 'package:home_x/features/autharization/date/auth_login/auth_cubit.dart';
@@ -20,7 +22,6 @@ class RefactorCustomTextFormFieldAndAddValidationsInLoginScreen
     return Form(
       key: formKey,
       child: Column(
-        
         children: [
           CustomTextFormField(
             onChange: (date) {
@@ -74,6 +75,8 @@ class RefactorCustomTextFormFieldAndAddValidationsInLoginScreen
               backgroundBottonsColors: AppColors.primaryColors,
               onPressed: () async {
                 if (formKey.currentState!.validate()) {
+                  getIt<CacheHelper>()
+                      .saveData(key: "homeVisited", value: true);
                   BlocProvider.of<AppLoginCubit>(context)
                       .userLogin(email: email!, password: password!);
                 } else {}
@@ -81,8 +84,7 @@ class RefactorCustomTextFormFieldAndAddValidationsInLoginScreen
               text: 'Log In',
             ),
           ),
-       
-         const Center(child:  AddTextBottonForgetPassword()),
+          const Center(child: AddTextBottonForgetPassword()),
         ],
       ),
     );

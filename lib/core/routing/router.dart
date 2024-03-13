@@ -4,7 +4,7 @@ import 'package:home_x/core/services/services_locator.dart';
 import 'package:home_x/features/autharization/Screens/forget_password/forget_password_screen.dart';
 import 'package:home_x/features/autharization/date/auth_forget_password/auth_cubit.dart';
 import 'package:home_x/features/autharization/date/auth_login/auth_cubit.dart';
-import 'package:home_x/features/autharization/Screens/lgoin/ui/login_options.dart';
+// import 'package:home_x/features/autharization/Screens/lgoin/ui/login_options.dart';
 import 'package:home_x/features/autharization/Screens/lgoin/ui/login_screen.dart';
 import 'package:home_x/features/autharization/date/auth_register/auth_register_cubit.dart';
 import 'package:home_x/features/autharization/Screens/register/ui/register.dart';
@@ -24,10 +24,10 @@ class SpatailRouter {
       case Routs.routOnbourdingScreen:
         return MaterialPageRoute(builder: (_) => const OnbourdingScreen()); 
 ///////////////////////////// Login and Register //////////////////////////////////////////////////
-      case Routs.routOptionsLoginScreen:
-        return MaterialPageRoute(builder: (_) => BlocProvider<AppLoginCubit>(
-          create: (context) => AppLoginCubit(),
-          child: const LoginOptions()));
+      // case Routs.routOptionsLoginScreen:
+      //   return MaterialPageRoute(builder: (_) => BlocProvider<AppLoginCubit>(
+      //     create: (context) => AppLoginCubit(),
+      //     child: const LoginOptions()));
 
 
       case Routs.routLoginScreen:
@@ -56,7 +56,11 @@ class SpatailRouter {
 
  ///////////////////////////////// Default /////////////////////////////////////////////////
       default:
-        return MaterialPageRoute(builder: (_) => const LoginOptions());
+        return MaterialPageRoute(builder: (_) =>  RegisterScreen());
     }
   }
 }
+
+    //   default:
+    //     return MaterialPageRoute(builder: (_) => const LoginOptions());
+    // }
