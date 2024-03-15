@@ -35,7 +35,7 @@ class _TestState extends State<Test> {
         ),
         body: Column(
           children: [
-            Text("Hello"),
+           const Text("Hello"),
             Center(child: Hero(
               tag:Assets.logoApp ,
               child: Image.asset(Assets.logoApp),
