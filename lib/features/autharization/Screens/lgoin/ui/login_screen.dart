@@ -41,14 +41,15 @@ class LoginScreen extends StatelessWidget {
           }
           isloaded = false;
         } else if (state is AppLoginErrorState) {
-          showSnackBars(context,const Text("some thing is wrong"), Colors.red);
+          showSnackBars(context,const Text("Some thing is wrong"), Colors.red);
           isloaded = false;
         }
       },
       builder: (context, state) => ModalProgressHUD(
         inAsyncCall: isloaded,
-        child: const Scaffold(
-          body:  LoginBodyScreen(),
+        child:   Scaffold(
+        backgroundColor: Color(0xffCFCFCF),
+          body:  SingleChildScrollView(child: LoginBodyScreen()), 
         ),
       ),
     );

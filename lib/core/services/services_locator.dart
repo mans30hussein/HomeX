@@ -1,4 +1,5 @@
 import 'package:get_it/get_it.dart';
+import 'package:home_x/core/shared_preference/cache_helper.dart';
 import 'package:home_x/features/autharization/date/auth_forget_password/auth_cubit.dart';
 import 'package:home_x/features/autharization/date/auth_login/auth_cubit.dart';
 import 'package:home_x/features/autharization/date/auth_register/auth_register_cubit.dart';
@@ -21,6 +22,7 @@ void setupServicesLocator() {
    getIt.registerSingleton<AppLoginCubit>(AppLoginCubit()); 
     getIt2.registerSingleton<AppRegisterCubit>(AppRegisterCubit()); 
    getIt3.registerSingleton<AppForgetPasswordCubit>(AppForgetPasswordCubit()); 
+    getIt.registerSingleton<CacheHelper>(CacheHelper());
     //getIt.registerSingleton()
 
 }
