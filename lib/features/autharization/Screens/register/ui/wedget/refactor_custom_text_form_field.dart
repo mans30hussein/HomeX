@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:home_x/core/services/services_locator.dart';
 import 'package:home_x/core/shared_preference/cache_helper.dart';
 import 'package:home_x/core/util/colors.dart';
+import 'package:home_x/core/util/constant.dart';
 import 'package:home_x/core/widgets/custom_material_bottons.dart';
 import 'package:home_x/features/autharization/Screens/lgoin/ui/widgets/custom_text_field.dart';
 import 'package:home_x/features/autharization/date/auth_register/auth_register_cubit.dart';
@@ -25,13 +26,13 @@ class RefactorCustomTextFormFieldAndAddValidationInRegisterScreen
             height: 30,
           ),
           CustomTextFormField(
-            hintText: "User Name",
+          
             lableText: 'User Name',
             prefixIcon: const Icon(Icons.person),
             inputType: TextInputType.name,
             validator: (value) {
               if (value!.isEmpty) {
-                return " please iner user name";
+                return " please inter user name";
               }
               return null;
             },
@@ -43,8 +44,8 @@ class RefactorCustomTextFormFieldAndAddValidationInRegisterScreen
             onChange: (date) {
               email = date;
             },
-            hintText: "Email Adress",
-            lableText: 'Email Adress',
+           
+            lableText:AppStrings.lableTextemai,
             prefixIcon: const Icon(Icons.email_outlined),
             inputType: TextInputType.emailAddress,
             validator: (value) {
@@ -57,14 +58,14 @@ class RefactorCustomTextFormFieldAndAddValidationInRegisterScreen
             height: 20,
           ),
           CustomTextFormField(
-            // lableText: 'Password',
+            lableText: AppStrings.lableTextPassword,
             onChange: (date) {
               password = date;
             },
-            hintText: 'Password',
+          
             inputType: TextInputType.visiblePassword,
             prefixIcon: const Icon(Icons.lock),
-            suffixIcon: Icons.visibility_off,
+           
             validator: (value) {
               if (value!.isEmpty) {
                 return " please inter password";
@@ -86,7 +87,7 @@ class RefactorCustomTextFormFieldAndAddValidationInRegisterScreen
                       .saveData(key: "homeVisited", value: true);
                 }
               },
-              text: 'Sign Up'),
+              text: AppStrings.signIn),
         ],
       ),
     );

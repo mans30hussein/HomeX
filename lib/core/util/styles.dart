@@ -12,7 +12,7 @@ class StylesApp {
       fontSize: 14,
       fontWeight: FontWieghtHelper.mediam,
       fontFamily: 'K2D',
-      color: Color(0xff868686));
+      color: Color.fromARGB(255, 83, 83, 83));
   static const TextStyle hintText = TextStyle(
       fontSize: 14,
       fontWeight: FontWieghtHelper.mediam,

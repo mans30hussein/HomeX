@@ -9,3 +9,7 @@ class AppLoginSuccessState extends AppLoginState {}
 class AppLoginErrorState extends AppLoginState {
   
 }
+class ChangeModePassword extends AppLoginState {
+  
+}
+
