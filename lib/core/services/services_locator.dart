@@ -16,7 +16,7 @@ final getIt2 =
     final getIt3 =
                     // create object git it from GitIt Singelton Pattern
                     //  to use all app istead of create object first time
-    GetIt.instance; c
+    GetIt.instance; 
 
 void setupServicesLocator() {
    getIt.registerSingleton<AppLoginCubit>(AppLoginCubit()); 
