@@ -9,14 +9,14 @@ class AddTextBottonForgetPassword extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
      // alignment: Alignment.centerRight,
-      padding: EdgeInsets.symmetric(horizontal:24 , vertical: 20),
+      padding: EdgeInsets.symmetric(horizontal:18 , vertical: 16),
       child: TextButton(
         onPressed: () {
           Navigator.pushNamed(
               context, Routs.routForgetPasswordScreen);
         },
         
-        child: const Text("Forget Password ?", style: StylesApp.styleForgetPassword,),
+        child: const Text("Forget Password ?", style: StylesApp.font16Madiam,),
       ),
     );
   }

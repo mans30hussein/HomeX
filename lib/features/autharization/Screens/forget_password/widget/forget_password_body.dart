@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:home_x/core/util/colors.dart';
 import 'package:home_x/core/widgets/custom_material_bottons.dart';
-import 'package:home_x/features/autharization/Screens/lgoin/ui/widgets/custom_text_field.dart';
+import 'package:home_x/core/widgets/custom_text_field.dart';
 import 'package:home_x/features/autharization/date/auth_forget_password/auth_cubit.dart';
 
 class ForgetPasswordBodyScreen extends StatelessWidget {

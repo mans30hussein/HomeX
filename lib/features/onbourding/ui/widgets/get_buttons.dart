@@ -28,7 +28,7 @@ class _GetButtonsState extends State<GetButtons> {
           getIt<CacheHelper>().saveData(key: "onBoardingvisited", value: true);
           Navigator.pushNamed(context, Routs.routLoginScreen);
         },
-        style: StylesApp.K2DStyle.copyWith(
+        style: StylesApp.font15Madiam.copyWith(
           color: AppColors.primaryColors,
         ),
         arrowColor: AppColors.primaryColors,
@@ -43,7 +43,7 @@ class _GetButtonsState extends State<GetButtons> {
           );
           // print(widget.curindx);
         },
-        style: StylesApp.K2DStyle.copyWith(fontSize: 16),
+        style: StylesApp.font15Madiam.copyWith(fontSize: 16),
       );
     }
   }
