@@ -43,7 +43,7 @@ class _OnbourdingContainerState extends State<OnbourdingContainer> {
               children: [
                 CustomText(
                   text: widget.onBoardingModel.title,
-                  style: StylesApp.K2DStyle.copyWith(
+                  style: StylesApp.font15Madiam.copyWith(
                     fontFamily: "K2DBold",
                     fontSize: 18,
                   ),
@@ -61,13 +61,13 @@ class _OnbourdingContainerState extends State<OnbourdingContainer> {
                 height: 100,
                 child: CustomText(
                   text: widget.onBoardingModel.subTitle1,
-                  style: StylesApp.K2DStyle,
+                  style: StylesApp.font15Madiam,
                 )),
             SizedBox(
                 height: 100,
                 child: CustomText(
                   text: widget.onBoardingModel.subTitle2,
-                  style: StylesApp.K2DStyle,
+                  style: StylesApp.font15Madiam,
                 )),
             GetButtons(
               curindx: widget.curindx,

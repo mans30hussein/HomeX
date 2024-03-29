@@ -7,7 +7,7 @@ import 'package:home_x/core/shared_preference/cache_helper.dart';
 import 'package:home_x/core/util/colors.dart';
 import 'package:home_x/core/widgets/custom_material_bottons.dart';
 import 'package:home_x/features/autharization/date/auth_login/auth_cubit.dart';
-import 'package:home_x/features/autharization/Screens/lgoin/ui/widgets/custom_text_field.dart';
+import 'package:home_x/core/widgets/custom_text_field.dart';
 
 import 'add_text_bottons_forget_password.dart';
 import 'add_text_have_acount_or_not.dart';
@@ -99,7 +99,7 @@ class _RefactorCustomTextFormFieldAndAddValidationsInLoginScreenState extends St
           Padding(
             padding: const EdgeInsets.only(right: 20),
             child: CustomMaterialBottons(
-              backgroundBottonsColors: AppColors.primaryColors,
+             
               onPressed: () async {
                 if (formKey.currentState!.validate()) {
                   getIt<CacheHelper>()

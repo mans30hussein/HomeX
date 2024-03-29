@@ -16,7 +16,7 @@ class AddTextBottonForgetPassword extends StatelessWidget {
               context, Routs.routForgetPasswordScreen);
         },
         
-        child: const Text("Forget Password ?", style: StylesApp.styleForgetPassword,),
+        child: const Text("Forget Password ?", style: StylesApp.font16Madiam,),
       ),
     );
   }

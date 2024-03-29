@@ -18,7 +18,7 @@ Widget CustomTextFormField({
   return Center(
     child: TextFormField(
       //  onTap: suffixPressed,
-      
+
       onChanged: onChange,
       obscureText: passwordVisible,
       keyboardType: inputType,
@@ -29,23 +29,19 @@ Widget CustomTextFormField({
       },
 
       decoration: InputDecoration(
-      
         filled: true,
-        fillColor:const Color(0xffFFFFFF),
-      //  hintText: hintText,
+        fillColor: const Color(0xffFFFFFF),
         enabled: true,
-        constraints:
-            const BoxConstraints(maxWidth: 320, maxHeight:55),
-        labelStyle: StylesApp.labelText,
-        hintStyle: StylesApp.labelText,
+       // constraints: const BoxConstraints(maxWidth: 320, maxHeight: 55),
+        labelStyle: StylesApp.font14Mediam,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(14),
         ),
         prefixIcon: prefixIcon,
-        prefixIconColor:AppColors.primaryColors,
+        prefixIconColor: AppColors.primaryColors,
         suffixIconColor: AppColors.primaryColors,
-        suffixIcon: suffixIcon ,
-        prefixStyle: StylesApp.hintText,
+        suffixIcon: suffixIcon,
+        prefixStyle: StylesApp.font14Mediam,
         labelText: lableText,
       ),
     ),

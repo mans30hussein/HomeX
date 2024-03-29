@@ -48,7 +48,7 @@ class OnBourdingBodyScreen extends StatelessWidget {
               child: GestureDetector(
                 child: const Text(
                   AppStrings.skip,
-                  style: StylesApp.K2DStyle,
+                  style: StylesApp.font15Madiam,
                 ),
                 onTap: () {
                   getIt<CacheHelper>()
@@ -72,7 +72,7 @@ class OnBourdingBodyScreen extends StatelessWidget {
           Center(
             child: CustomText(
               text: "Home X",
-              style: StylesApp.K2DStyle.copyWith(
+              style: StylesApp.font15Madiam.copyWith(
                 color: Colors.white,
               ),
             ),
