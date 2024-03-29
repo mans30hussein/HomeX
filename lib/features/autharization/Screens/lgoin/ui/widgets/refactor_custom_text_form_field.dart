@@ -99,8 +99,13 @@ class _RefactorCustomTextFormFieldAndAddValidationsInLoginScreenState extends St
           Padding(
             padding: const EdgeInsets.only(right: 20),
             child: CustomMaterialBottons(
+ 
              
               onPressed: () async {
+
+              backgroundBottonsColors: Colors.blue,
+                       onPressed: () async {
+
                 if (formKey.currentState!.validate()) {
                   getIt<CacheHelper>()
                       .saveData(key: "homeVisited", value: true);
