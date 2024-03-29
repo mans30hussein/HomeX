@@ -72,8 +72,8 @@ class RefactorCustomTextFormFieldAndAddValidationsInLoginScreen
           Padding(
             padding: const EdgeInsets.only(right: 20),
             child: CustomMaterialBottons(
-              backgroundBottonsColors: AppColors.primaryColors,
-              onPressed: () async {
+              backgroundBottonsColors: Colors.blue,
+                       onPressed: () async {
                 if (formKey.currentState!.validate()) {
                   getIt<CacheHelper>()
                       .saveData(key: "homeVisited", value: true);
