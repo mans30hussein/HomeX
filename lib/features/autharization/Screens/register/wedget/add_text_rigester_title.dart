@@ -12,7 +12,7 @@ class AddTextRegisterTitle extends StatelessWidget {
      padding:  EdgeInsets.only(left: 20.0),
      child: Text(
        "Register",
-       style: StylesApp.loginTitle,
+       style: StylesApp.font30SemiBold,
      ),
                     );
   }

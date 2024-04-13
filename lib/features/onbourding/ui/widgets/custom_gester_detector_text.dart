@@ -22,7 +22,7 @@ class CustomGesterDetectorText extends StatelessWidget {
         children: [
           Text(
             text,
-            style: style ?? StylesApp.K2DStyle,
+            style: style ?? StylesApp.font15Madiam,
           ),
            Icon(
             Icons.arrow_forward,

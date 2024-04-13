@@ -12,7 +12,7 @@ class AddTextLoginTitle extends StatelessWidget {
       padding: EdgeInsets.only(left: 20.0),
       child: Text(
         "Log In",
-        style: StylesApp.loginTitle,
+        style: StylesApp.font30SemiBold,
       ),
     );
   }

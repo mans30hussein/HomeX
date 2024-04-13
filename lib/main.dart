@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:home_x/core/services/services_locator.dart';
 import 'package:home_x/firebase_options.dart';
+import 'package:home_x/test.dart';
 import 'core/routing/const_routs.dart';
 import 'core/routing/router.dart';
 import 'core/shared_preference/cache_helper.dart';
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
         
       ),
       debugShowCheckedModeBanner: false,
-    
+    //home: Test(),
       initialRoute: Routs.routSplashScreen,
       onGenerateRoute: SpatailRouter.generateRouts,
     );
