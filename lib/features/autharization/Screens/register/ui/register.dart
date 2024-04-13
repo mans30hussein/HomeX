@@ -1,8 +1,8 @@
 // ignore_for_file: must_be_immutable
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:home_x/features/autharization/Screens/register/ui/wedget/listener_in_register.dart';
-import 'package:home_x/features/autharization/Screens/register/ui/wedget/register_body_screen.dart';
+import 'package:home_x/features/autharization/Screens/register/wedget/listener_in_register.dart';
+import 'package:home_x/features/autharization/Screens/register/wedget/register_body_screen.dart';
 import 'package:home_x/features/autharization/date/auth_register/auth_register_cubit.dart';
 import 'package:home_x/features/autharization/date/auth_register/auth_register_state.dart';
 

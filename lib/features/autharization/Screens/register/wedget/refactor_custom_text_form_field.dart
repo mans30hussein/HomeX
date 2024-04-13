@@ -71,7 +71,7 @@ class RefactorCustomTextFormFieldAndAddValidationInRegisterScreen
                 return " please inter password";
               }
             },
-            controller: TextEditingController(),
+          //  controller: TextEditingController(),
           ),
           const SizedBox(
             height: 50,
@@ -83,11 +83,11 @@ class RefactorCustomTextFormFieldAndAddValidationInRegisterScreen
                 if (formKey.currentState!.validate()) {
                   BlocProvider.of<AppRegisterCubit>(context)
                       .userRegister(email: email!, password: password!);
-                      getIt<CacheHelper>()
-                      .saveData(key: "homeVisited", value: true);
+                      // getIt<CacheHelper>()
+                      // .saveData(key: "homeVisited", value: true);
                 }
               },
-              text: AppStrings.signIn),
+              text: AppStrings.signUp),
         ],
       ),
     );

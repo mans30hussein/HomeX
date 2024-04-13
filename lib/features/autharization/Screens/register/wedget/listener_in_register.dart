@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:home_x/core/routing/const_routs.dart';
-import 'package:home_x/features/autharization/Screens/lgoin/ui/widgets/show_snack_bar.dart';
+import 'package:home_x/features/autharization/Screens/lgoin/widgets/show_snack_bar.dart';
 import 'package:home_x/features/autharization/date/auth_register/auth_register_state.dart';
 
 class ListnerInRegister {

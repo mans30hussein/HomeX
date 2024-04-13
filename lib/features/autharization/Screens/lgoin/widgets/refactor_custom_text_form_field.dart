@@ -1,4 +1,4 @@
-// ignore_for_file: must_be_immutable
+// ignore_for_file: must_be_immutable, sort_child_properties_last, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -10,7 +10,7 @@ import 'package:home_x/features/autharization/date/auth_login/auth_cubit.dart';
 import 'package:home_x/core/widgets/custom_text_field.dart';
 
 import 'add_text_bottons_forget_password.dart';
-import 'add_text_have_acount_or_not.dart';
+import 'add_text_have_acount_or_not_in_login.dart';
 
 class RefactorCustomTextFormFieldAndAddValidationsInLoginScreen
     extends StatefulWidget {
@@ -103,7 +103,7 @@ class _RefactorCustomTextFormFieldAndAddValidationsInLoginScreenState extends St
               onPressed: () async {
                 if (formKey.currentState!.validate()) {
                   getIt<CacheHelper>()
-                      .saveData(key: "homeVisited", value: true);
+                      .saveData(key: "homeVisited", value: false);
                   BlocProvider.of<AppLoginCubit>(context)
                       .userLogin(email: email!, password: password!);
                 } else {}
@@ -111,7 +111,7 @@ class _RefactorCustomTextFormFieldAndAddValidationsInLoginScreenState extends St
               text: 'Log In',
             ),
           ),
-          const Center(child: AddTextBottonForgetPassword()),
+
         ],
       ),
     );

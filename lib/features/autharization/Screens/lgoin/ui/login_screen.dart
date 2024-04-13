@@ -7,8 +7,8 @@ import 'package:home_x/core/routing/const_routs.dart';
 import 'package:home_x/core/util/colors.dart';
 import 'package:home_x/features/autharization/date/auth_login/auth_cubit.dart';
 import 'package:home_x/features/autharization/date/auth_login/auth_state.dart';
-import 'package:home_x/features/autharization/Screens/lgoin/ui/widgets/login_body_screen.dart';
-import 'package:home_x/features/autharization/Screens/lgoin/ui/widgets/show_snack_bar.dart';
+import 'package:home_x/features/autharization/Screens/lgoin/widgets/login_body_screen.dart';
+import 'package:home_x/features/autharization/Screens/lgoin/widgets/show_snack_bar.dart';
 //import 'package:home_x/login_2/login2_screen/widget_2/login_body_screen.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 

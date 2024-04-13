@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
     //home: Test(),
-      initialRoute: Routs.routLoginScreen,
+      initialRoute: Routs.routSplashScreen,
       onGenerateRoute: SpatailRouter.generateRouts,
     );
   }

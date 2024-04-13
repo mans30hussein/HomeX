@@ -34,19 +34,20 @@ void delayedNavigate(context) {
       seconds: 2,
     ),
     () {
-      bool onBoardingvisited =
-              getIt<CacheHelper>().getData(key: "onBoardingvisited") ?? false,
-          homeVisited =
-              getIt<CacheHelper>().getData(key: "homeVisited") ?? false;
-      if (homeVisited) {
-        Navigator.pushNamed(context, Routs.routHomeScreen);
-      } else {
-        if (onBoardingvisited) {
-          Navigator.pushNamed(context, Routs.routLoginScreen);
-        } else {
-          Navigator.pushNamed(context, Routs.routOnbourdingScreen);
-        }
-      }
+      Navigator.pushNamed(context, Routs.routOnbourdingScreen);
+      // bool onBoardingvisited =
+      //         getIt<CacheHelper>().getData(key: "onBoardingvisited") ?? false,
+      //     homeVisited =
+      //         getIt<CacheHelper>().getData(key: "homeVisited") ?? false;
+      // if (homeVisited) {
+      //   Navigator.pushNamed(context, Routs.routHomeScreen);
+      // } else {
+      //   if (onBoardingvisited) {
+      //     Navigator.pushNamed(context, Routs.routLoginScreen);
+      //   } else {
+      //     Navigator.pushNamed(context, Routs.routOnbourdingScreen);
+      //   }
+      // }
     },
   );
 }

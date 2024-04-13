@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:home_x/core/routing/const_routs.dart';
 import 'package:home_x/core/util/assets.dart';
 import 'package:home_x/core/util/constant.dart';
-import 'package:home_x/features/autharization/Screens/lgoin/ui/widgets/add_text_login_title.dart';
-import 'package:home_x/features/autharization/Screens/lgoin/ui/widgets/refactor_custom_text_form_field.dart';
-import 'add_text_have_acount_or_not.dart';
+import 'package:home_x/features/autharization/Screens/lgoin/widgets/add_text_login_title.dart';
+import 'package:home_x/features/autharization/Screens/lgoin/widgets/refactor_custom_text_form_field.dart';
+import 'add_text_have_acount_or_not_in_login.dart';
 
 class LoginBodyScreen extends StatelessWidget {
    const LoginBodyScreen({
@@ -31,13 +31,7 @@ class LoginBodyScreen extends StatelessWidget {
           const SizedBox(
             height: 40,
           ),     
-           AddTextHaveAcountOrNot(
-          onPressed: () {
-            Navigator.pushNamed(context, Routs.routRegisterScreen);
-          },
-            text1: AppStrings.dontHaveAcount,
-            text2: AppStrings.signUp,
-          ),
+           const AddDontHaveAcountOrNot(),
            
         ],
       ),

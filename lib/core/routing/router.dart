@@ -50,7 +50,7 @@ class SpatailRouter {
 
  ///////////////////////////////// Default /////////////////////////////////////////////////
       default:
-        return MaterialPageRoute(builder: (_) =>  LoginScreen());
+        return MaterialPageRoute(builder: (_) => const SplashScreen());
     }
   }
 }
