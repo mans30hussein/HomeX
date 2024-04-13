@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:home_x/core/routing/const_routs.dart';
 import 'package:home_x/core/util/styles.dart';

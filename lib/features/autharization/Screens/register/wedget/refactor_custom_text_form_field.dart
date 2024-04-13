@@ -2,8 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:home_x/core/services/services_locator.dart';
-import 'package:home_x/core/shared_preference/cache_helper.dart';
 import 'package:home_x/core/util/colors.dart';
 import 'package:home_x/core/util/constant.dart';
 import 'package:home_x/core/widgets/custom_material_bottons.dart';

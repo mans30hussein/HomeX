@@ -9,7 +9,7 @@ class ListnerInRegister {
       isLoaded = true;
     } else if (state is AppRegisterSuccessState) {
       showSnackBars(context, const Text('Successfully,Check your email to verfiy your account'),
-         Color(0xEB4FFD23));
+         const Color(0xEB4FFD23));
       Navigator.pushNamed(context, Routs.routLoginScreen);
      
       isLoaded = false;

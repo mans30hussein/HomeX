@@ -23,7 +23,7 @@ class AddTextDoYouHaveAcountOrNot extends StatelessWidget {
           onPressed: () {
             Navigator.pushNamed(context, Routs.routLoginScreen);
           },
-          child:const Text("Sign In",style: const TextStyle(color: Color(0xff8B78FF), fontSize: 18),),
+          child:const Text("Sign In",style:  TextStyle(color: Color(0xff8B78FF), fontSize: 18),),
         ),
        
       ],
