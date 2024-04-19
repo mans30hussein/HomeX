@@ -13,7 +13,7 @@ import 'package:home_x/features/autharization/Screens/lgoin/widgets/show_snack_b
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 class LoginScreen extends StatefulWidget {
-  LoginScreen({super.key});
+  const LoginScreen({super.key});
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
