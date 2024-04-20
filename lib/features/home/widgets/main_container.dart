@@ -12,8 +12,9 @@ class FeatureContainer extends StatefulWidget {
       required this.image,
       required this.trackColor,
       required this.thumb1Color,
-      required this.thumb2Color});
+      required this.thumb2Color, required this.backgroundImage});
   final String image;
+  final String backgroundImage;
   final Color backgroundColor;
   final Color trackColor;
   final Color thumb1Color;
@@ -31,7 +32,12 @@ class _FeatureContainerState extends State<FeatureContainer> {
       padding: const EdgeInsets.only(left: 8, right: 8, bottom: 8),
       clipBehavior: Clip.hardEdge,
       decoration: BoxDecoration(
-        color: widget.isSwitched ? widget.thumb2Color : widget.thumb1Color,
+          color: widget.isSwitched? widget.thumb2Color : null,
+          image: widget.isSwitched? null :  DecorationImage(
+              image: AssetImage(widget.backgroundImage),
+              fit: BoxFit.cover,
+            ),
+        // color: widget.isSwitched ? widget.thumb2Color : widget.thumb1Color,
         borderRadius: BorderRadius.circular(22),
       ),
       height: 174,

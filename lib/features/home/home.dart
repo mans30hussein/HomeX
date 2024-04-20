@@ -16,6 +16,7 @@ class Home extends StatelessWidget {
         trackColor: AppColors.lightGrey,
         thumb1Color: AppColors.primaryColors,
         thumb2Color: AppColors.lavender,
+        backgroundImage: Assets.assetsImagesActivewavespurple,
       )),
     );
   }
