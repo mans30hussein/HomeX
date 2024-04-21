@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:home_x/core/routing/const_routs.dart';
 import 'package:home_x/core/util/styles.dart';
 
@@ -12,7 +13,7 @@ class AddDontHaveAcountOrNot extends StatelessWidget {
         child: Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Text(
+         Text(
           " Don't have account ?",
           style: StylesApp.font15Madiam,
         ),
@@ -20,9 +21,9 @@ class AddDontHaveAcountOrNot extends StatelessWidget {
 
         TextButton(
           onPressed: () {
-            Navigator.pushNamed(context, Routs.routRegisterScreen);
+            Navigator.pushReplacementNamed(context, Routs.routRegisterScreen);
           },
-          child:const Text("Sign Up",style:  TextStyle(color: Color(0xff8B78FF), fontSize: 18),),
+          child: Text("Sign Up",style:  TextStyle(color: Color(0xff8B78FF), fontSize: 18.sp),),
         ),
        
         // ),

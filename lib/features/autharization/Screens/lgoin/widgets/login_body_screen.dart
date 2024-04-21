@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:home_x/core/util/assets.dart';
 import 'package:home_x/features/autharization/Screens/lgoin/widgets/add_text_login_title.dart';
 import 'package:home_x/features/autharization/Screens/lgoin/widgets/refactor_custom_text_form_field.dart';
@@ -17,17 +18,17 @@ class LoginBodyScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const SizedBox(
-            height: 100,
+           SizedBox(
+            height: 100.h,
           ),
           Center(child: Image.asset(Assets.logoApp)),
         const  Center(child:  AddTextLoginTitle()),
-          const SizedBox(
-            height: 30,
+           SizedBox(
+            height: 30.h,
           ),
           RefactorCustomTextFormFieldAndAddValidationsInLoginScreen(),
-          const SizedBox(
-            height: 40,
+           SizedBox(
+            height: 40.h,
           ),     
            const AddDontHaveAcountOrNot(),
            

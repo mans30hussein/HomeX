@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:home_x/features/onbourding/data/onbourding_model.dart';
 import 'package:home_x/features/onbourding/ui/widgets/onboarding_container.dart';
 
@@ -8,7 +9,7 @@ class OnBoardingView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 500,
+      height: 500.h,
       child: PageView.builder(
         controller: controller,
         itemCount: onBoardingList.length,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class SmoothDotsIndicator extends StatelessWidget {
@@ -17,8 +18,8 @@ class SmoothDotsIndicator extends StatelessWidget {
       controller: controller,
       count: count,
       effect:  ExpandingDotsEffect(
-        dotWidth: 8,
-        dotHeight: 7,
+        dotWidth: 8.w,
+        dotHeight: 7.h,
         activeDotColor:const Color(0xff8B78FF),
         dotColor: Colors.black.withOpacity(.7)
       ),

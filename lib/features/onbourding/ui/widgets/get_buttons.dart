@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:home_x/core/routing/const_routs.dart';
 import 'package:home_x/core/services/services_locator.dart';
 import 'package:home_x/core/util/app_strings.dart';
@@ -26,7 +27,7 @@ class _GetButtonsState extends State<GetButtons> {
         text: AppStrings.getStarted,
         ontap: () {
           getIt<CacheHelper>().saveData(key: "onBoardingvisited", value: true);
-          Navigator.pushNamed(context, Routs.routLoginScreen);
+          Navigator.pushReplacementNamed(context, Routs.routLoginScreen);
         },
         style: StylesApp.font15Madiam.copyWith(
           color: AppColors.primaryColors,
@@ -43,7 +44,7 @@ class _GetButtonsState extends State<GetButtons> {
           );
           // print(widget.curindx);
         },
-        style: StylesApp.font15Madiam.copyWith(fontSize: 16),
+        style: StylesApp.font15Madiam.copyWith(fontSize: 16.sp),
       );
     }
   }
