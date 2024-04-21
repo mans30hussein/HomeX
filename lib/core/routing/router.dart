@@ -46,7 +46,7 @@ class SpatailRouter {
         ));
 /////////////////////////////// Home Screen ////////////////////////////////////
       case Routs.routHomeScreen:
-        return MaterialPageRoute(builder: (_) =>const Home());
+        return MaterialPageRoute(builder: (_) => Home());
 
  ///////////////////////////////// Default /////////////////////////////////////////////////
       default:

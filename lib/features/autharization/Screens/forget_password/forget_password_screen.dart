@@ -19,7 +19,7 @@ class ForgetPassword extends StatelessWidget {
               const Text("Check Your Email To Reset Password"), Colors.green);
           Navigator.pushNamed(context, Routs.routLoginScreen);
         } else if (state is AppErrorForgetPasswordState) {
-          showSnackBars(context, Text("xxxxxxxxxxxxxxxxxxxx"), Colors.red);
+          showSnackBars(context, Text("Check your email"), Colors.red);
         }
         // TODO: implement listener
       },

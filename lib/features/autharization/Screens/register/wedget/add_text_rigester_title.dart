@@ -8,7 +8,7 @@ class AddTextRegisterTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
+    return  Padding(
      padding:  EdgeInsets.only(left: 20.0),
      child: Text(
        "Register",

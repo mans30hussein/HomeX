@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:home_x/core/routing/const_routs.dart';
 import 'package:home_x/core/services/services_locator.dart';
 import 'package:home_x/core/util/app_assets.dart';
 import 'package:home_x/core/util/app_strings.dart';
@@ -42,27 +44,34 @@ class OnBourdingBodyScreen extends StatelessWidget {
       child: ListView(
         children: [
           Padding(
-            padding: const EdgeInsets.only(right: 16),
+            padding:  EdgeInsets.only(right: 20.sp , top: 30.sp),
             child: Align(
               alignment: Alignment.topRight,
               child: GestureDetector(
-                child: const Text(
-                  AppStrings.skip,
-                  style: StylesApp.font15Madiam,
-                ),
-                onTap: () {
+                 onTap: () {
+                  print("skip");
                   getIt<CacheHelper>()
-                      .saveData(key: "onBoardingvisited", value: true);
-                 // Navigator.pushNamed(context, Routs.routLoginScreen);
+                      .saveData(key: "isOnBoardingvisited", value: true);
+                 Navigator.pushReplacementNamed(context, Routs.routLoginScreen);
                 },
+                child:  Text(
+                  
+                  AppStrings.skip,
+                  style:TextStyle(
+                    
+                    color: Colors.white,
+                    fontSize: 20.sp,
+                  )
+                ),
+               
               ),
             ),
           ),
-          const SizedBox(
-            height: 110,
+           SizedBox(
+            height: 90.h,
           ),
           Container(
-            height: 90,
+            height: 90.h,
             decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(Assets.assetsImagesAppIcon),
@@ -74,11 +83,13 @@ class OnBourdingBodyScreen extends StatelessWidget {
               text: "Home X",
               style: StylesApp.font15Madiam.copyWith(
                 color: Colors.white,
+                fontSize: 20.sp,
+                fontWeight: FontWeight.w500,
               ),
             ),
           ),
-          const SizedBox(
-            height: 110,
+           SizedBox(
+            height: 110.h,
           ),
           OnBoardingView(
             controller: controller,

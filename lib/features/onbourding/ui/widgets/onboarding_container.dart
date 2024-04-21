@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:home_x/core/util/styles.dart';
 import 'package:home_x/features/onbourding/data/onbourding_model.dart';
 import 'package:home_x/features/onbourding/ui/widgets/custom_text.dart';
@@ -24,7 +25,7 @@ class _OnbourdingContainerState extends State<OnbourdingContainer> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 390,
+      height: 390.h,
       width: double.infinity,
       decoration: const BoxDecoration(
         color: Colors.white,
@@ -45,7 +46,7 @@ class _OnbourdingContainerState extends State<OnbourdingContainer> {
                   text: widget.onBoardingModel.title,
                   style: StylesApp.font15Madiam.copyWith(
                     fontFamily: "K2DBold",
-                    fontSize: 18,
+                    fontSize: 18.sp,
                   ),
                 ),
                 SmoothDotsIndicator(
@@ -54,17 +55,17 @@ class _OnbourdingContainerState extends State<OnbourdingContainer> {
                 ),
               ],
             ),
-            const SizedBox(
-              height: 20,
+             SizedBox(
+              height: 20.h,
             ),
             SizedBox(
-                height: 100,
+                height: 100.h,
                 child: CustomText(
                   text: widget.onBoardingModel.subTitle1,
                   style: StylesApp.font15Madiam,
                 )),
             SizedBox(
-                height: 100,
+                height: 100.h,
                 child: CustomText(
                   text: widget.onBoardingModel.subTitle2,
                   style: StylesApp.font15Madiam,

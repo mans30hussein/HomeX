@@ -14,11 +14,11 @@ class AddTextBottonForgetPassword extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal:18 , vertical: 16),
       child: TextButton(
         onPressed: () {
-          Navigator.pushNamed(
+          Navigator.pushReplacementNamed(
               context, Routs.routForgetPasswordScreen);
         },
         
-        child: const Text("Forget Password ?", style: StylesApp.font16Madiam,),
+        child:  Text("Forget Password ?", style: StylesApp.font16Madiam,),
       ),
     );
   }

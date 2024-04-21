@@ -10,11 +10,13 @@ class ListnerInRegister {
     } else if (state is AppRegisterSuccessState) {
       showSnackBars(context, const Text('Successfully,Check your email to verfiy your account'),
          const Color(0xEB4FFD23));
-      Navigator.pushNamed(context, Routs.routLoginScreen);
+      Navigator.pushReplacementNamed(context, Routs.routLoginScreen);
      
       isLoaded = false;
     } else if (state is AppRegisterErrorState) {
-      showSnackBars(context, const Text('some thing is wrong'), Colors.red);
+      showSnackBars(
+        
+        context, const Text('Please check your email and password'), Colors.red);
       isLoaded = false;
     }
   }

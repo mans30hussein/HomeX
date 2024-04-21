@@ -9,6 +9,7 @@ import 'package:home_x/features/autharization/date/auth_login/auth_cubit.dart';
 import 'package:home_x/features/autharization/date/auth_login/auth_state.dart';
 import 'package:home_x/features/autharization/Screens/lgoin/widgets/login_body_screen.dart';
 import 'package:home_x/features/autharization/Screens/lgoin/widgets/show_snack_bar.dart';
+import 'package:home_x/features/home/home.dart';
 //import 'package:home_x/login_2/login2_screen/widget_2/login_body_screen.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
@@ -46,7 +47,9 @@ class _LoginScreenState extends State<LoginScreen> {
         } else if (state is AppLoginSuccessState) {
          // Navigator.pushNamed(context, Routs.routHomeScreen);
          if(FirebaseAuth.instance.currentUser!.emailVerified ){
-            Navigator.pushNamed(context, Routs.routHomeScreen);
+          
+            Navigator.pushReplacementNamed(context, Routs.routHomeScreen);
+            // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const Home()));
           }else{
             showSnackBars(
               context,
@@ -55,7 +58,7 @@ class _LoginScreenState extends State<LoginScreen> {
           }
           isloaded = false;
         } else if (state is AppLoginErrorState) {
-          showSnackBars(context,const Text("Some thing is wrong"), Colors.red);
+          showSnackBars(context,const Text("Please check your email and password"), Colors.red);
           isloaded = false;
         }
       },
