@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:home_x/core/util/assets.dart';
 import 'package:home_x/core/util/colors.dart';
 import 'package:home_x/features/autharization/Screens/register/wedget/refactor_custom_text_form_field.dart';
@@ -27,25 +28,25 @@ class RegisterBodyScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const SizedBox(
-                  height: 100,
+                 SizedBox(
+                  height: 100.h,
                 ),
                 Center(child: Image.asset(Assets.logoApp)),
                 const Center(child:  AddTextRegisterTitle()),
                 RefactorCustomTextFormFieldAndAddValidationInRegisterScreen(),
-                const SizedBox(
-                  height: 20,
+                 SizedBox(
+                  height: 20.h,
                 ),
             const    AddTextDoYouHaveAcountOrNot(),
-          const SizedBox(height: 20,),
+           SizedBox(height: 20.h,),
                 Container(
                     alignment: Alignment.center,
                     margin: const EdgeInsets.symmetric(horizontal: 20),
                     child: Image.asset(
                       Assets.googleImage,
                 
-                      height: 100,
-                      width: 100,
+                      height: 100.h,
+                      width: 100.w,
                     )),
                    
                     

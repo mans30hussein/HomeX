@@ -13,37 +13,40 @@ class ForgetPasswordBodyScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Form(
       key: formKey,
-      child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            CustomTextFormField(
-              onChange: (date) {
-                email = date;
-              },
-              hintText: "Email Adress",
-              lableText: 'Email Adress',
-              prefixIcon: const Icon(Icons.email_outlined),
-              inputType: TextInputType.emailAddress,
-              validator: (value) {
-                if (value!.isEmpty) {
-                  return " please inter email";
-                }
-              },
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-            CustomMaterialBottons(
-                backgroundBottonsColors:AppColors.primaryColors,
-                onPressed: () {
-                  if (formKey.currentState!.validate()) {
-                    BlocProvider.of<AppForgetPasswordCubit>(context)
-                        .resetPasswordLink(email: email!);
+      child: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              CustomTextFormField(
+                onChange: (date) {
+                  email = date;
+                },
+                hintText: "Email Adress",
+                lableText: 'Email Adress',
+                prefixIcon: const Icon(Icons.email_outlined),
+                inputType: TextInputType.emailAddress,
+                validator: (value) {
+                  if (value!.isEmpty) {
+                    return " please inter email";
                   }
                 },
-                text: 'send password Link verification'),
-          ]),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              CustomMaterialBottons(
+                  backgroundBottonsColors:AppColors.primaryColors,
+                  onPressed: () {
+                    if (formKey.currentState!.validate()) {
+                      BlocProvider.of<AppForgetPasswordCubit>(context)
+                          .resetPasswordLink(email: email!);
+                    }
+                  },
+                  text: 'send password Link verification'),
+            ]),
+      ),
     );
   }
 }

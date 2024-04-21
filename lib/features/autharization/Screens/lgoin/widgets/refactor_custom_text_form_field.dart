@@ -2,11 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:home_x/core/services/services_locator.dart';
-import 'package:home_x/core/shared_preference/cache_helper.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:home_x/core/widgets/custom_material_bottons.dart';
 import 'package:home_x/features/autharization/date/auth_login/auth_cubit.dart';
 import 'package:home_x/core/widgets/custom_text_field.dart';
+import 'package:home_x/features/onbourding/data/on_bourd.dart';
 
 import 'add_text_bottons_forget_password.dart';
 
@@ -52,8 +52,8 @@ class _RefactorCustomTextFormFieldAndAddValidationsInLoginScreenState extends St
               }
             },
           ),
-          const SizedBox(
-            height: 20,
+           SizedBox(
+            height: 20.h,
           ),
           CustomTextFormField(
             
@@ -101,10 +101,11 @@ class _RefactorCustomTextFormFieldAndAddValidationsInLoginScreenState extends St
              
               onPressed: () async {
                 if (formKey.currentState!.validate()) {
-                  getIt<CacheHelper>()
-                      .saveData(key: "homeVisited", value: false);
+                  // getIt<CacheHelper>()
+                  //     .saveData(key: "homeVisited", value: false);
                   BlocProvider.of<AppLoginCubit>(context)
                       .userLogin(email: email!, password: password!);
+                      onBoardingVisited();
                 } else {}
               },
               text: 'Log In',
