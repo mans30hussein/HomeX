@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:home_x/core/util/assets.dart';
+import 'package:home_x/core/util/app_assets.dart';
 import 'package:home_x/core/util/colors.dart';
 import 'package:home_x/features/autharization/Screens/register/wedget/refactor_custom_text_form_field.dart';
 import 'package:home_x/features/autharization/Screens/register/wedget/add_text_rigester_title.dart';

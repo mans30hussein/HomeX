@@ -9,7 +9,6 @@ import 'package:home_x/features/home/home.dart';
 import 'package:home_x/firebase_options.dart';
 import 'core/shared_preference/cache_helper.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
