@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:home_x/core/routing/const_routs.dart';
 import 'package:home_x/core/services/services_locator.dart';
 import 'package:home_x/core/shared_preference/cache_helper.dart';
-import 'package:home_x/core/util/assets.dart';
+import 'package:home_x/core/util/app_assets.dart';
 import 'package:home_x/core/util/colors.dart';
 
 
@@ -24,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return const Scaffold(
       backgroundColor: AppColors.backgroundSplashScreen,
-      body: Center(child: Image(image: AssetImage(Assets.logoApp))),
+      body: Center(child: Image(image: AssetImage(Assets.assetsImagesAppIcon))),
     );
   }
 }

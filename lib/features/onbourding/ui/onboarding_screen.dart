@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:home_x/core/services/services_locator.dart';
+import 'package:home_x/core/util/app_assets.dart';
 import 'package:home_x/core/util/app_strings.dart';
 
 import 'package:home_x/core/shared_preference/cache_helper.dart';
-import 'package:home_x/core/util/assets.dart';
 import 'package:home_x/core/util/styles.dart';
 import 'package:home_x/features/onbourding/ui/widgets/custom_text.dart';
 import 'package:home_x/features/onbourding/ui/widgets/onboarding_view.dart';
@@ -65,7 +65,7 @@ class OnBourdingBodyScreen extends StatelessWidget {
             height: 90,
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage(Assets.logoApp),
+                image: AssetImage(Assets.assetsImagesAppIcon),
               ),
             ),
           ),
