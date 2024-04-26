@@ -7,6 +7,7 @@ import 'package:home_x/core/routing/router.dart';
 import 'package:home_x/core/services/services_locator.dart';
 import 'package:home_x/features/home/home.dart';
 import 'package:home_x/firebase_options.dart';
+import 'package:home_x/test.dart';
 import 'core/shared_preference/cache_helper.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 void main() async {
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
         splitScreenMode: true,
         builder: (context, child) => MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: Home(),
+          home: Test(),
           // initialRoute: Routs.routSplashScreen,
           // onGenerateRoute: SpatailRouter.generateRouts,
         ),

@@ -13,6 +13,7 @@ class CustomText extends StatelessWidget {
     return Text(
       text,
       style: style,
+      
       textAlign: TextAlign.start,
       // maxLines: 3,
       // overflow: TextOverflow.ellipsis,

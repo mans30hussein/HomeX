@@ -8,4 +8,8 @@ abstract class AppColors {
   static const Color backgroundsecandColorScreen = Color(0xffFCFCFC);
   static const Color lightGrey = Color(0xffDFE6F1);
   static const Color lavender = Color(0xffAC9FFF);
+  static const Color babyblue = Color(0xffB2D6FF);
+  static const Color lightBlue = Color(0xff2AB2DB);
+  static const Color blue = Color(0xff5E97DA);
+  static const Color mediumBlue = Color(0xff7885FF);
 }
