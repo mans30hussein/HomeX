@@ -1,99 +1,55 @@
-import 'dart:async';
-import 'dart:developer' as developer;
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
-import 'package:connectivity_plus/connectivity_plus.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:home_x/core/routing/const_routs.dart';
 
-class Home extends StatefulWidget {
-   Home({super.key});
+import 'package:home_x/features/home/kitchen.dart';
+import 'package:home_x/features/home/office.dart';
+import 'package:home_x/features/home/room.dart';
 
+import 'widgets/home_view_body.dart';
+
+class Home extends StatelessWidget {
+  Home({super.key});
+  int currentIndex = 0;
+  List<Widget> Screens = [
+    Room(),
+    Office(),
+    Kitchen(),
+  ];
   @override
-  State<Home> createState() => _HomeState();
-}
+  Widget build(BuildContext context) {
+    return Scaffold(
+      // backgroundColor: Colors.amberAccent,
 
-class _HomeState extends State<Home> {
-  List<ConnectivityResult> _connectionStatus = [ConnectivityResult.none];
-
-  final Connectivity _connectivity = Connectivity();
-
-  late StreamSubscription<List<ConnectivityResult>> _connectivitySubscription;
-
-  @override
-  void initState() {
-    super.initState();
-    initConnectivity();
-
-    _connectivitySubscription =
-        _connectivity.onConnectivityChanged.listen(_updateConnectionStatus);
-  }
-
-  @override
-  void dispose() {
-    _connectivitySubscription.cancel();
-    super.dispose();
-  }
- Future<void> initConnectivity() async {
-    late List<ConnectivityResult> result;
-    // Platform messages may fail, so we use a try/catch PlatformException.
-    try {
-      result = await _connectivity.checkConnectivity();
-    } on PlatformException catch (e) {
-      developer.log('Couldn\'t check connectivity status', error: e);
-      return;
-    }
-
-    // If the widget was removed from the tree while the asynchronous platform
-    // message was in flight, we want to discard the reply rather than calling
-    // setState to update our non-existent appearance.
-    if (!mounted) {
-      return Future.value(null);
-    }
-
-    return _updateConnectionStatus(result);
-  }
-
-  Future<void> _updateConnectionStatus(List<ConnectivityResult> result) async {
-    setState(() {
-      _connectionStatus = result;
-    });
-  }
-  @override
-  @override
-Widget build(BuildContext context) {
-  return Scaffold(
-    backgroundColor: Colors.amberAccent,
-    body: Center(
-      child: _buildContent(),
-    ),
-  );
-}
-
-Widget _buildContent() {
-  if (_connectionStatus.contains(ConnectivityResult.mobile) ||
-      _connectionStatus.contains(ConnectivityResult.wifi)) {
-    // Connected to either mobile data or WiFi, show the log out button
-    return MaterialButton(
-      color: Colors.white,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-      onPressed: () async {
-        //await FirebaseAuth.instance.signOut();
-        // mohamedhusseinmans@gmail.com
-      //  Navigator.popAndPushNamed(context, Routs.routLoginScreen);
-      },
-      child: const Text(
-        "Log Out",
-        style: TextStyle(color: Colors.black),
+      body: ListView(
+        children: [
+          Column(
+          children: [
+            Row(
+              children: [
+                const Spacer(),
+                // SvgPicture.asset(
+                  
+                // )
+                // SvgPicture.asset(
+                //   'assets/images/common_vector.svg',
+                //   alignment: Alignment.topRight,
+                // ),
+              ],
+            ),
+            HomeViewBody(
+        
+            ),
+           // Expanded(child: Screens[currentIndex]),
+          ],
+        ),
+        ]
+       
       ),
-    );
-  } else {
-    // Not connected, show a message indicating no connection
-    return Text(
-      "No Internet Connection",
-      style: TextStyle(color: Colors.white),
+      // Center(
+      //   child: _buildContent(),
+      // ),
     );
   }
-}
-
 }

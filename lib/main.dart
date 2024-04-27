@@ -2,14 +2,17 @@
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:home_x/core/routing/const_routs.dart';
-import 'package:home_x/core/routing/router.dart';
+
 import 'package:home_x/core/services/services_locator.dart';
-import 'package:home_x/features/home/home.dart';
 import 'package:home_x/firebase_options.dart';
+
+import 'package:home_x/test_code.dart/test_ui.dart';
+
 import 'package:home_x/test.dart';
 import 'core/shared_preference/cache_helper.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
@@ -34,6 +37,7 @@ class MyApp extends StatelessWidget {
         splitScreenMode: true,
         builder: (context, child) => MaterialApp(
           debugShowCheckedModeBanner: false,
+       
           home: Test(),
           // initialRoute: Routs.routSplashScreen,
           // onGenerateRoute: SpatailRouter.generateRouts,
@@ -42,4 +46,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-

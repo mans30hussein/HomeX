@@ -49,6 +49,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '535343347974',
     projectId: 'homex-fd825',
     authDomain: 'homex-fd825.firebaseapp.com',
+    databaseURL: 'https://homex-fd825-default-rtdb.firebaseio.com',
     storageBucket: 'homex-fd825.appspot.com',
     measurementId: 'G-1MZXH5318K',
   );
@@ -67,6 +68,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '535343347974',
     projectId: 'homex-fd825',
     storageBucket: 'homex-fd825.appspot.com',
+    iosClientId: '535343347974-f0r1ttu2mm2mh75oshrla1r2649otb31.apps.googleusercontent.com',
     iosBundleId: 'com.example.homex',
   );
 
@@ -75,7 +77,9 @@ class DefaultFirebaseOptions {
     appId: '1:535343347974:ios:61ff7d5f0a90fa14254687',
     messagingSenderId: '535343347974',
     projectId: 'homex-fd825',
+    databaseURL: 'https://homex-fd825-default-rtdb.firebaseio.com',
     storageBucket: 'homex-fd825.appspot.com',
+    iosClientId: '535343347974-pdp7e07gd4h781b7sr5kd70n79g9n71v.apps.googleusercontent.com',
     iosBundleId: 'com.example.homex.RunnerTests',
   );
 }
