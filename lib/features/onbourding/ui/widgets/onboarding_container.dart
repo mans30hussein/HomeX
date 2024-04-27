@@ -67,7 +67,7 @@ class _OnbourdingContainerState extends State<OnbourdingContainer> {
             SizedBox(
                 height: 100.h,
                 child: CustomText(
-                  text: widget.onBoardingModel.subTitle2,
+                  text: widget.onBoardingModel.subTitle2!,
                   style: StylesApp.font15Madiam,
                 )),
             GetButtons(

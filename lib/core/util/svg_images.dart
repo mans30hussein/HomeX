@@ -63,4 +63,13 @@ class SVGImges {
   final Widget gasEllipse = SvgPicture.asset(
     Assets.assetsImagesGasEllipse,
   );
+  final Widget onboardingOne = SvgPicture.asset(
+    Assets.assetsImagesOnboardingOne,
+  );
+  final Widget onboardingTwo = SvgPicture.asset(
+    Assets.assetsImagesOnboardingTwo,
+  );
+  final Widget onboardingThree = SvgPicture.asset(
+    Assets.assetsImagesOnboardingthree,
+  );
 }

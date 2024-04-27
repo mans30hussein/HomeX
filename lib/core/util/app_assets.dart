@@ -73,6 +73,18 @@ class Assets {
   /// assets/images/officeLampaOff.svg
   static const String assetsImagesOfficeLampaOff = "assets/images/officeLampaOff.svg";
 
+  /// Assets for assetsImagesOnboardingOne
+  /// assets/images/onboardingOne.svg
+  static const String assetsImagesOnboardingOne = "assets/images/onboardingOne.svg";
+
+  /// Assets for assetsImagesOnboardingTwo
+  /// assets/images/onboardingTwo.svg
+  static const String assetsImagesOnboardingTwo = "assets/images/onboardingTwo.svg";
+
+  /// Assets for assetsImagesOnboardingthree
+  /// assets/images/onboardingthree.svg
+  static const String assetsImagesOnboardingthree = "assets/images/onboardingthree.svg";
+
   /// Assets for assetsImagesPlant
   /// assets/images/plant.svg
   static const String assetsImagesPlant = "assets/images/plant.svg";

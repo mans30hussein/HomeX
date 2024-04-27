@@ -6,6 +6,7 @@ import 'package:home_x/features/home/lighting/lighting_container.dart';
 import 'package:home_x/features/home/bedRoom/bed_lighing_container.dart';
 import 'package:home_x/features/home/plant/plant_container.dart';
 import 'package:home_x/features/home/temp/temp_container.dart';
+import 'package:home_x/features/onbourding/ui/onboarding_screen.dart';
 
 class Test extends StatelessWidget {
   const Test({super.key});
@@ -13,11 +14,7 @@ class Test extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-          child: PlantContainer(
-        soilMoisture: false,
-        waterPumpState: false,
-      )),
+      body: OnbourdingScreen(),
     );
   }
 }

@@ -44,31 +44,27 @@ class OnBourdingBodyScreen extends StatelessWidget {
       child: ListView(
         children: [
           Padding(
-            padding:  EdgeInsets.only(right: 20.sp , top: 30.sp),
+            padding: EdgeInsets.only(right: 20.sp, top: 30.sp),
             child: Align(
               alignment: Alignment.topRight,
               child: GestureDetector(
-                 onTap: () {
+                onTap: () {
                   print("skip");
                   getIt<CacheHelper>()
                       .saveData(key: "isOnBoardingvisited", value: true);
-                 Navigator.pushReplacementNamed(context, Routs.routLoginScreen);
+                  Navigator.pushReplacementNamed(
+                      context, Routs.routLoginScreen);
                 },
-                child:  Text(
-                  
-                  AppStrings.skip,
-                  style:TextStyle(
-                    
-                    color: Colors.white,
-                    fontSize: 20.sp,
-                  )
-                ),
-               
+                child: Text(AppStrings.skip,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20.sp,
+                    )),
               ),
             ),
           ),
-           SizedBox(
-            height: 90.h,
+          SizedBox(
+            height: 80.h,
           ),
           Container(
             height: 90.h,
@@ -88,8 +84,8 @@ class OnBourdingBodyScreen extends StatelessWidget {
               ),
             ),
           ),
-           SizedBox(
-            height: 110.h,
+          SizedBox(
+            height: 100.h,
           ),
           OnBoardingView(
             controller: controller,
