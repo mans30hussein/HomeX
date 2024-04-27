@@ -15,7 +15,7 @@ class AddTextDoYouHaveAcountOrNot extends StatelessWidget {
       children: [
         
          Text(
-          " Do you have account ?",
+          " Do  ?",
           style: StylesApp.font15Madiam,
         ),
          SizedBox(width: 5.w),
