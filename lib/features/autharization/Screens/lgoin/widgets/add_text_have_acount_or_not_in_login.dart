@@ -14,10 +14,10 @@ class AddDontHaveAcountOrNot extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
          Text(
-          " Don't have account ?",
+          " Don't ?",
           style: StylesApp.font15Madiam,
         ),
-        //const SizedBox(width: 5),
+        const SizedBox(width: 5),
 
         TextButton(
           onPressed: () {
