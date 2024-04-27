@@ -4,7 +4,7 @@ import 'dart:developer' as developer;
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_svg/svg.dart';
+
 import 'package:home_x/core/routing/const_routs.dart';
 
 class Home extends StatefulWidget {
@@ -114,16 +114,16 @@ class Test extends StatelessWidget {
         title: const Text('Test'),
       ),
       body: Container(
-  decoration: BoxDecoration(
-    image: DecorationImage(
-      image: SvgPicture.asset(
-        'assets/images/Vector.svg',
-        width: 100, // Adjust the width and height as needed
-        height: 100,
-      ) as ImageProvider, // Use the image property of SvgPicture.asset
-      fit: BoxFit.cover,
-    ),
-  ),
+  // decoration: BoxDecoration(
+  //   image: DecorationImage(
+  //     image: SvgPicture.asset(
+  //       'assets/images/Vector.svg',
+  //       width: 100, // Adjust the width and height as needed
+  //       height: 100,
+  //     ) as ImageProvider, // Use the image property of SvgPicture.asset
+  //     fit: BoxFit.cover,
+  //   ),
+  // ),
 ),
 
       

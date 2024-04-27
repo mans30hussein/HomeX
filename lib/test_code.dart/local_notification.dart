@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:home_x/core/util/app_assets.dart';
-import 'package:lottie/lottie.dart';
 
+
+import '../core/util/app_assets.dart';
 import '../features/home/lighting/lighting_container.dart';
 
 class LocalNotification extends StatelessWidget {
