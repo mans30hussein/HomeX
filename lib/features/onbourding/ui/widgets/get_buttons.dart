@@ -30,9 +30,9 @@ class _GetButtonsState extends State<GetButtons> {
           Navigator.pushReplacementNamed(context, Routs.routLoginScreen);
         },
         style: StylesApp.font15Madiam.copyWith(
-          color: AppColors.primaryColors,
+          color: onBoardingList[widget.curindx].color,
         ),
-        arrowColor: AppColors.primaryColors,
+        arrowColor: onBoardingList[widget.curindx].color,
       );
     } else {
       return CustomGesterDetectorText(
@@ -44,7 +44,9 @@ class _GetButtonsState extends State<GetButtons> {
           );
           // print(widget.curindx);
         },
-        style: StylesApp.font15Madiam.copyWith(fontSize: 16.sp),
+        style: StylesApp.font15Madiam.copyWith(
+            fontSize: 16.sp, color: onBoardingList[widget.curindx].color),
+        arrowColor: onBoardingList[widget.curindx].color,
       );
     }
   }

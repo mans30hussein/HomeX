@@ -7,21 +7,23 @@ class SmoothDotsIndicator extends StatelessWidget {
     super.key,
     required this.controller,
     required this.count,
+    required this.color,
   });
 
   final PageController controller;
   final int count;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
     return SmoothPageIndicator(
       controller: controller,
       count: count,
-      effect:  ExpandingDotsEffect(
+      effect: ExpandingDotsEffect(
         dotWidth: 8.w,
         dotHeight: 7.h,
-        activeDotColor:const Color(0xff8B78FF),
-        dotColor: Colors.black.withOpacity(.7)
+        activeDotColor: color,
+        dotColor: color,
       ),
     );
   }

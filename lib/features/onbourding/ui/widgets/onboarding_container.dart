@@ -10,7 +10,8 @@ class OnbourdingContainer extends StatefulWidget {
   const OnbourdingContainer({
     super.key,
     required this.onBoardingModel,
-    required this.controller, required this.curindx,
+    required this.controller,
+    required this.curindx,
   });
 
   final OnBoardingModel onBoardingModel;
@@ -25,7 +26,7 @@ class _OnbourdingContainerState extends State<OnbourdingContainer> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 390.h,
+      height: 300,
       width: double.infinity,
       decoration: const BoxDecoration(
         color: Colors.white,
@@ -38,6 +39,7 @@ class _OnbourdingContainerState extends State<OnbourdingContainer> {
         padding: const EdgeInsets.all(24.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -52,22 +54,17 @@ class _OnbourdingContainerState extends State<OnbourdingContainer> {
                 SmoothDotsIndicator(
                   controller: widget.controller,
                   count: onBoardingList.length,
+                  color: onBoardingList[widget.curindx].color,
                 ),
               ],
             ),
-             SizedBox(
+            SizedBox(
               height: 20.h,
             ),
             SizedBox(
                 height: 100.h,
                 child: CustomText(
                   text: widget.onBoardingModel.subTitle1,
-                  style: StylesApp.font15Madiam,
-                )),
-            SizedBox(
-                height: 100.h,
-                child: CustomText(
-                  text: widget.onBoardingModel.subTitle2!,
                   style: StylesApp.font15Madiam,
                 )),
             GetButtons(
@@ -78,5 +75,22 @@ class _OnbourdingContainerState extends State<OnbourdingContainer> {
         ),
       ),
     );
+
+    // return LayoutBuilder(builder: (context, constraints) {
+    //   final halfScreenHeight = constraints.maxHeight / 2;
+    //   return SizedBox(
+    //     height: halfScreenHeight,
+    //     child: PageView.builder(
+    //       controller: controller,
+    //       itemCount: onBoardingList.length,
+    //       physics: const BouncingScrollPhysics(),
+    //       itemBuilder: (context, index) => OnbourdingContainer(
+    //         controller: controller,
+    //         onBoardingModel: onBoardingList[index],
+    //         curindx: index,
+    //       ),
+    //     ),
+    //   );
+    // });
   }
 }
