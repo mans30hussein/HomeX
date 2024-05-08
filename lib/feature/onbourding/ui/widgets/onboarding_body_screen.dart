@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:home_x/feature/onbourding/data/onbourding_model.dart';
 import 'package:home_x/features/onbourding/data/onbourding_model.dart';
 import 'package:home_x/features/onbourding/ui/widgets/onboarding_container.dart';
 
