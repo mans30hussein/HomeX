@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:home_x/feature/homes/homePage/views/home_page.dart';
 
-class Navigation extends StatefulWidget {
-  const Navigation({super.key});
+class NavigationIcon extends StatefulWidget {
+  const NavigationIcon({super.key});
 
   @override
-  State<Navigation> createState() => _NavigationState();
+  State<NavigationIcon> createState() => _NavigationState();
 }
 
-class _NavigationState extends State<Navigation> {
+class _NavigationState extends State<NavigationIcon> {
   int selectedIndex = 0;
   List<Widget> screens = [
     // const HomePage(),

@@ -8,6 +8,7 @@ import 'package:home_x/feature/autharization/Screens/lgoin/ui/login_screen.dart'
 import 'package:home_x/feature/autharization/date/auth_register/auth_register_cubit.dart';
 import 'package:home_x/feature/autharization/Screens/register/ui/register.dart';
 import 'package:home_x/feature/homes/homePage/views/home_page.dart';
+import 'package:home_x/feature/homes/icon_navigation/icon_navigate.dart';
 import 'package:home_x/feature/onbourding/ui/onboarding_screen.dart';
 import 'package:home_x/feature/splash/splash_screen.dart';
 
@@ -48,6 +49,9 @@ class SpatailRouter {
 /////////////////////////////// Home Screen ////////////////////////////////////
       case Routs.routHomeScreen:
         return MaterialPageRoute(builder: (_) => const HomePage());
+
+      case Routs.routIconNavigation:
+        return MaterialPageRoute(builder: (_) => const NavigationIcon());    
 
  ///////////////////////////////// Default /////////////////////////////////////////////////
       default:

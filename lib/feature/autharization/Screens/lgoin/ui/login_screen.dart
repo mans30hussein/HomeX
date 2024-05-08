@@ -47,7 +47,7 @@ class _LoginScreenState extends State<LoginScreen> {
         } else if (state is AppLoginSuccessState) {
       //   Navigator.pushNamed(context, Routs.routHomeScreen);
          if(FirebaseAuth.instance.currentUser!.emailVerified ){
-          Navigator.of(context).pushNamedAndRemoveUntil(Routs.routHomeScreen, (route) => false);
+          Navigator.of(context).pushNamedAndRemoveUntil(Routs.routIconNavigation, (route) => false);
            // Navigator.pushReplacementNamed(context, Routs.routHomeScreen);
             // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const Home()));
           }else{

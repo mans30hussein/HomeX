@@ -4,7 +4,9 @@ class Routs{
   static const routLoginScreen = "/LoginScreen";
   static const routRegisterScreen = "/RegisterScreen";
    static const routForgetPasswordScreen = "/ForgetPassword";
-  static const routHomeScreen = "/Home";
+  static const routHomeScreen = "/HomePage";
+   static const routIconNavigation = "/NavigationIcon";
+
 
 
   }

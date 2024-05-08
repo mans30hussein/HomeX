@@ -10,7 +10,7 @@ import 'package:home_x/firebase_options.dart';
 import 'core/shared_preference/cache_helper.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'feature/homes/file.dart';
+import 'feature/homes/icon_navigation/icon_navigate.dart';
 import 'feature/homes/homePage/views/home_page.dart';
 
 void main() async {
@@ -38,9 +38,9 @@ class MyApp extends StatelessWidget {
         builder: (context, child) => MaterialApp(
           debugShowCheckedModeBanner: false,
 
-          home: Navigation(),
-          // initialRoute: Routs.routSplashScreen,
-          // onGenerateRoute: SpatailRouter.generateRouts,
+         // home: Navigation(),
+          initialRoute: Routs.routSplashScreen,
+          onGenerateRoute: SpatailRouter.generateRouts,
         ),
       ),
     );
