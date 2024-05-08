@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:home_x/core/util/app_assets.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class SVGImges {
   final Widget lampaOn = SvgPicture.asset(
     Assets.assetsImagesLampaOn,
+    
     fit: BoxFit.fill,
   );
   final Widget lampaOff = SvgPicture.asset(

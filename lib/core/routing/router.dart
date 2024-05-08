@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:home_x/core/services/services_locator.dart';
-import 'package:home_x/features/autharization/Screens/forget_password/forget_password_screen.dart';
-import 'package:home_x/features/autharization/date/auth_forget_password/auth_cubit.dart';
-import 'package:home_x/features/autharization/date/auth_login/auth_cubit.dart';
-import 'package:home_x/features/autharization/Screens/lgoin/ui/login_screen.dart';
-import 'package:home_x/features/autharization/date/auth_register/auth_register_cubit.dart';
-import 'package:home_x/features/autharization/Screens/register/ui/register.dart';
-import 'package:home_x/features/home/home.dart';
-import 'package:home_x/features/onbourding/ui/onboarding_screen.dart';
-import 'package:home_x/features/splash/splash_screen.dart';
+import 'package:home_x/feature/autharization/Screens/forget_password/forget_password_screen.dart';
+import 'package:home_x/feature/autharization/date/auth_forget_password/auth_cubit.dart';
+import 'package:home_x/feature/autharization/date/auth_login/auth_cubit.dart';
+import 'package:home_x/feature/autharization/Screens/lgoin/ui/login_screen.dart';
+import 'package:home_x/feature/autharization/date/auth_register/auth_register_cubit.dart';
+import 'package:home_x/feature/autharization/Screens/register/ui/register.dart';
+import 'package:home_x/feature/homes/homePage/views/home_page.dart';
+import 'package:home_x/feature/onbourding/ui/onboarding_screen.dart';
+import 'package:home_x/feature/splash/splash_screen.dart';
+
 
 import 'const_routs.dart';
 
@@ -28,7 +29,7 @@ class SpatailRouter {
         return MaterialPageRoute(
           builder: (_) => BlocProvider<AppLoginCubit>(
             create: (context) => getIt<AppLoginCubit>(),
-            child: LoginScreen()
+            child:const LoginScreen()
             ),
         );
 
@@ -46,7 +47,7 @@ class SpatailRouter {
         ));
 /////////////////////////////// Home Screen ////////////////////////////////////
       case Routs.routHomeScreen:
-        return MaterialPageRoute(builder: (_) => Home());
+        return MaterialPageRoute(builder: (_) => const HomePage());
 
  ///////////////////////////////// Default /////////////////////////////////////////////////
       default:
