@@ -2,14 +2,19 @@
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-
+import 'package:home_x/core/routing/const_routs.dart';
+import 'package:home_x/core/routing/router.dart';
 import 'package:home_x/core/services/services_locator.dart';
+import 'package:home_x/feature/autharization/Screens/lgoin/ui/login_screen.dart';
 import 'package:home_x/firebase_options.dart';
 
 
 import 'package:home_x/test.dart';
 import 'core/shared_preference/cache_helper.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import 'feature/homes/icon_navigation/icon_navigate.dart';
+import 'feature/homes/homePage/views/home_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
