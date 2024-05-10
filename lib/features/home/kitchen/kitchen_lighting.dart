@@ -6,55 +6,39 @@ import 'package:home_x/core/util/svg_images.dart';
 import 'package:home_x/features/onbourding/ui/widgets/custom_text.dart';
 
 // ignore: must_be_immutable
-class BedLightContainer extends StatefulWidget {
-  BedLightContainer({
+class KitchenLighting extends StatefulWidget {
+  KitchenLighting({
     super.key,
   });
 
   bool isSwitched = false;
   @override
-  State<BedLightContainer> createState() => _BedLightContainerState();
+  State<KitchenLighting> createState() => _KitchenLightingState();
 }
 
-class _BedLightContainerState extends State<BedLightContainer> {
+class _KitchenLightingState extends State<KitchenLighting> {
   @override
   Widget build(BuildContext context) {
     return Container(
       clipBehavior: Clip.hardEdge,
       decoration: BoxDecoration(
-        color: widget.isSwitched ? null : AppColors.babyblue,
+        color: AppColors.babyblue,
         borderRadius: BorderRadius.circular(22),
       ),
       height: 190,
       width: 174,
       child: Stack(
         children: [
-          if (widget.isSwitched)
-            Positioned.fill(
-              child: FittedBox(
-                fit: BoxFit.cover,
-                child: SVGImges().blueWaves2,
-              ),
-            ),
           Positioned(
             top: 0,
             right: 0,
-            child: widget.isSwitched
-                ? SVGImges().babyLampaOn
-                : SVGImges().babyLampaOff,
+            child: SVGImges().kitchenLampa,
           ),
-          // Positioned(
-          //   left: 15,
-          //   bottom: 0,
-          //   child: widget.isSwitched
-          //       ? SVGImges().bedLightOn
-          //       : SVGImges().bedLightOff,
-          // ),
           Positioned(
             bottom: 0,
-            right: 0,
+            left: 0,
             child: Padding(
-              padding: const EdgeInsets.only(right: 8.0, bottom: 8),
+              padding: const EdgeInsets.only(left: 8.0),
               child: Column(
                 children: [
                   CustomText(
@@ -72,11 +56,8 @@ class _BedLightContainerState extends State<BedLightContainer> {
                         });
                       },
                       inactiveThumbColor: AppColors.lightGrey,
-                      thumbColor: !widget.isSwitched
-                          ? const MaterialStatePropertyAll<Color>(
-                              AppColors.babyblue)
-                          : const MaterialStatePropertyAll<Color>(
-                              AppColors.blue),
+                      thumbColor: const MaterialStatePropertyAll<Color>(
+                          AppColors.babyblue),
                       activeTrackColor: AppColors.lightGrey,
                       inactiveTrackColor: AppColors.lightGrey,
                       trackOutlineColor: const MaterialStatePropertyAll<Color>(

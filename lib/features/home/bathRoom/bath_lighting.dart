@@ -6,41 +6,39 @@ import 'package:home_x/core/util/svg_images.dart';
 import 'package:home_x/features/onbourding/ui/widgets/custom_text.dart';
 
 // ignore: must_be_immutable
-class OfficLightContainer extends StatefulWidget {
-  OfficLightContainer({
+class BathLighitng extends StatefulWidget {
+  BathLighitng({
     super.key,
   });
 
   bool isSwitched = false;
   @override
-  State<OfficLightContainer> createState() => _OfficLightContainerState();
+  State<BathLighitng> createState() => _BathLighitngState();
 }
 
-class _OfficLightContainerState extends State<OfficLightContainer> {
+class _BathLighitngState extends State<BathLighitng> {
   @override
   Widget build(BuildContext context) {
     return Container(
       clipBehavior: Clip.hardEdge,
       decoration: BoxDecoration(
-        color: widget.isSwitched ? null : AppColors.babyblue,
+        color: AppColors.babyblue,
         borderRadius: BorderRadius.circular(22),
       ),
       height: 190,
       width: 174,
       child: Stack(
         children: [
-          if (widget.isSwitched)
-            Positioned.fill(
-              child: FittedBox(
-                fit: BoxFit.cover,
-                child: SVGImges().blueWaves2,
-              ),
-            ),
+          Positioned(
+            top: 0,
+            right: 45,
+            child: SVGImges().bathRoomLight,
+          ),
           Positioned(
             bottom: 0,
-            left: 10,
+            left: 0,
             child: Padding(
-              padding: const EdgeInsets.only(right: 8.0, bottom: 8),
+              padding: const EdgeInsets.only(left: 8.0),
               child: Column(
                 children: [
                   CustomText(
@@ -58,11 +56,8 @@ class _OfficLightContainerState extends State<OfficLightContainer> {
                         });
                       },
                       inactiveThumbColor: AppColors.lightGrey,
-                      thumbColor: !widget.isSwitched
-                          ? const MaterialStatePropertyAll<Color>(
-                              AppColors.babyblue)
-                          : const MaterialStatePropertyAll<Color>(
-                              AppColors.blue),
+                      thumbColor: const MaterialStatePropertyAll<Color>(
+                          AppColors.babyblue),
                       activeTrackColor: AppColors.lightGrey,
                       inactiveTrackColor: AppColors.lightGrey,
                       trackOutlineColor: const MaterialStatePropertyAll<Color>(
@@ -72,13 +67,6 @@ class _OfficLightContainerState extends State<OfficLightContainer> {
                 ],
               ),
             ),
-          ),
-          Positioned(
-            right: 20,
-            top: 20,
-            child: widget.isSwitched
-                ? SVGImges().officLampaOn
-                : SVGImges().officLampaOff,
           ),
         ],
       ),

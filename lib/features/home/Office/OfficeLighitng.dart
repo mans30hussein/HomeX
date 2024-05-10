@@ -6,23 +6,23 @@ import 'package:home_x/core/util/svg_images.dart';
 import 'package:home_x/features/onbourding/ui/widgets/custom_text.dart';
 
 // ignore: must_be_immutable
-class LightingContainer extends StatefulWidget {
-  LightingContainer({
+class OfficLightContainer extends StatefulWidget {
+  OfficLightContainer({
     super.key,
   });
 
   bool isSwitched = false;
   @override
-  State<LightingContainer> createState() => _LightingContainerState();
+  State<OfficLightContainer> createState() => _OfficLightContainerState();
 }
 
-class _LightingContainerState extends State<LightingContainer> {
+class _OfficLightContainerState extends State<OfficLightContainer> {
   @override
   Widget build(BuildContext context) {
     return Container(
       clipBehavior: Clip.hardEdge,
       decoration: BoxDecoration(
-        color: widget.isSwitched ? null : AppColors.lavender,
+        color: widget.isSwitched ? null : AppColors.babyblue,
         borderRadius: BorderRadius.circular(22),
       ),
       height: 190,
@@ -33,19 +33,14 @@ class _LightingContainerState extends State<LightingContainer> {
             Positioned.fill(
               child: FittedBox(
                 fit: BoxFit.cover,
-                child: SVGImges().purpleWaves,
+                child: SVGImges().blueWaves2,
               ),
             ),
           Positioned(
-            top: 0,
-            right: 0,
-            child: widget.isSwitched ? SVGImges().lampaOn : SVGImges().lampaOff,
-          ),
-          Positioned(
             bottom: 0,
-            left: 0,
+            left: 10,
             child: Padding(
-              padding: const EdgeInsets.only(left: 8.0),
+              padding: const EdgeInsets.only(right: 8.0, bottom: 8),
               child: Column(
                 children: [
                   CustomText(
@@ -65,9 +60,9 @@ class _LightingContainerState extends State<LightingContainer> {
                       inactiveThumbColor: AppColors.lightGrey,
                       thumbColor: !widget.isSwitched
                           ? const MaterialStatePropertyAll<Color>(
-                              AppColors.lavender)
+                              AppColors.babyblue)
                           : const MaterialStatePropertyAll<Color>(
-                              AppColors.primaryColors),
+                              AppColors.blue),
                       activeTrackColor: AppColors.lightGrey,
                       inactiveTrackColor: AppColors.lightGrey,
                       trackOutlineColor: const MaterialStatePropertyAll<Color>(
@@ -77,6 +72,13 @@ class _LightingContainerState extends State<LightingContainer> {
                 ],
               ),
             ),
+          ),
+          Positioned(
+            right: 20,
+            top: 20,
+            child: widget.isSwitched
+                ? SVGImges().officeLightOn
+                : SVGImges().officeLightOff,
           ),
         ],
       ),

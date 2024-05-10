@@ -14,11 +14,19 @@ class SVGImges {
   final Widget blueWaves = SvgPicture.asset(
     Assets.assetsImagesBlueWaves,
   );
+  final Widget halfBlueWaves = SvgPicture.asset(
+    Assets.assetsImagesBlueWave2,
+  );
   final Widget blueWaves2 = SvgPicture.asset(
     Assets.assetsImagesBlueWaves2,
   );
   final Widget purpleWaves = SvgPicture.asset(
     Assets.assetsImagesPurpleWaves,
+  );
+  final Widget purpleWaves2 = SvgPicture.asset(
+    Assets.assetsImagesPurpleWaves2,
+    // height: 50,
+    width: 175,
   );
   final Widget fanOn = SvgPicture.asset(
     Assets.assetsImagesFanOn,
@@ -26,8 +34,11 @@ class SVGImges {
   final Widget fanOff = SvgPicture.asset(
     Assets.assetsImagesFanOff,
   );
-  final Widget bedLightOn = SvgPicture.asset(
-    Assets.assetsImagesOfficLapaOn,
+  final Widget officeLightOn = SvgPicture.asset(
+    Assets.assetsImagesOfficeOn,
+  );
+  final Widget officeLightOff = SvgPicture.asset(
+    Assets.assetsImagesOfficeOff,
   );
   final Widget bedLightOff = SvgPicture.asset(
     Assets.assetsImagesBedLapamOff,
@@ -37,12 +48,6 @@ class SVGImges {
   );
   final Widget babyLampaOff = SvgPicture.asset(
     Assets.assetsImagesBabyLampaOff,
-  );
-  final Widget officLampaOn = SvgPicture.asset(
-    Assets.assetsImagesOfficLapaOn,
-  );
-  final Widget officLampaOff = SvgPicture.asset(
-    Assets.assetsImagesOfficeLampaOff,
   );
 
   final Widget temp = SvgPicture.asset(
@@ -63,6 +68,9 @@ class SVGImges {
   final Widget gasEllipse = SvgPicture.asset(
     Assets.assetsImagesGasEllipse,
   );
+  final Widget kitchenLampa = SvgPicture.asset(
+    Assets.assetsImagesKitchenLampa,
+  );
   final Widget onboardingOne = SvgPicture.asset(
     Assets.assetsImagesOnboardingOne,
   );
@@ -71,5 +79,10 @@ class SVGImges {
   );
   final Widget onboardingThree = SvgPicture.asset(
     Assets.assetsImagesOnboardingthree,
+  );
+  final Widget bathRoomLight = SvgPicture.asset(
+    Assets.assetsImagesBathLampa,
+    height: 70,
+    width: 70,
   );
 }

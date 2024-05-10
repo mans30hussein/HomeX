@@ -6,12 +6,10 @@ import 'package:flutter/material.dart';
 import 'package:home_x/core/services/services_locator.dart';
 import 'package:home_x/firebase_options.dart';
 
-import 'package:home_x/test_code.dart/test_ui.dart';
 
 import 'package:home_x/test.dart';
 import 'core/shared_preference/cache_helper.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,7 +20,8 @@ void main() async {
   );
 
   await getIt<CacheHelper>().init();
-  runApp(const MyApp());
+  runApp(const MyApp(),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -37,7 +36,7 @@ class MyApp extends StatelessWidget {
         splitScreenMode: true,
         builder: (context, child) => MaterialApp(
           debugShowCheckedModeBanner: false,
-       
+
           home: Test(),
           // initialRoute: Routs.routSplashScreen,
           // onGenerateRoute: SpatailRouter.generateRouts,
