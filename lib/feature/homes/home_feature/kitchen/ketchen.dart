@@ -12,11 +12,9 @@ class Ketchen extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         TempContainer(
-          temp: 20,
         ),
         SizedBox(width: 16.w,),
         TempContainer(
-          temp: 40,
         ),
       ],
     );

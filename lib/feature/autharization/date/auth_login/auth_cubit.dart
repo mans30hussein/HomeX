@@ -1,5 +1,4 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:home_x/feature/autharization/date/auth_login/auth_state.dart';
 class AppLoginCubit extends Cubit<AppLoginState> {
