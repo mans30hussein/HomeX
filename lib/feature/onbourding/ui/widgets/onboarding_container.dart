@@ -39,7 +39,7 @@ class _OnbourdingContainerState extends State<OnbourdingContainer> {
         padding: const EdgeInsets.all(24.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -58,15 +58,18 @@ class _OnbourdingContainerState extends State<OnbourdingContainer> {
                 ),
               ],
             ),
-            SizedBox(
-              height: 20.h,
+            const SizedBox(
+              height: 20,
             ),
             SizedBox(
-                height: 100.h,
+                // height: 100.h,
                 child: CustomText(
-                  text: widget.onBoardingModel.subTitle1,
-                  style: StylesApp.font15Madiam,
-                )),
+              text: widget.onBoardingModel.subTitle1,
+              style: StylesApp.font15Madiam,
+            )),
+            const SizedBox(
+              height: 20,
+            ),
             GetButtons(
               curindx: widget.curindx,
               controller: widget.controller,
