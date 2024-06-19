@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:home_x/feature/autharization/Screens/lgoin/ui/login_screen.dart';
+import 'package:home_x/feature/autharization/Screens/register/wedget/drop_down.dart';
 import 'package:home_x/feature/homes/homePage/views/home_page.dart';
 
 import 'package:home_x/feature/homes/home_feature/bathroom/bathroom.dart';
@@ -17,7 +18,7 @@ class Test extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child:const GasContainer(),
+        child: TempContainer(),
       ),
     );
   }

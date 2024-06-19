@@ -1,4 +1,6 @@
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'dart:math';
+
 class LocalNotification {
   // setup
   static FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
@@ -11,7 +13,7 @@ class LocalNotification {
       android: AndroidInitializationSettings('@mipmap/ic_launcher'),
       iOS: DarwinInitializationSettings(),
     );
-    
+
     // Initializing the FlutterLocalNotificationsPlugin
     await FlutterLocalNotificationsPlugin().initialize(
       initializationSettings,
@@ -22,6 +24,7 @@ class LocalNotification {
 
   static void basicNotification() async {
     // Notification details for Android
+    final int notificationId = Random().nextInt(100000);
     NotificationDetails notificationDetails = const NotificationDetails(
       android: AndroidNotificationDetails(
         'id 1',
@@ -30,10 +33,10 @@ class LocalNotification {
         importance: Importance.high,
       ),
     );
-    
+
     // Displaying the notification
     flutterLocalNotificationsPlugin.show(
-        111, 'basic', 'body', notificationDetails);
+        notificationId, 'basic', 'body', notificationDetails);
   }
 }
 
