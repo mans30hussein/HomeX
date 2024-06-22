@@ -29,7 +29,7 @@ class SpatailRouter {
       case Routs.routLoginScreen:
         return MaterialPageRoute(
           builder: (_) => BlocProvider<AppLoginCubit>(
-            create: (context) => getIt<AppLoginCubit>(),
+            create: (context) => AppLoginCubit(),
             child:const LoginScreen()
             ),
         );
@@ -38,7 +38,7 @@ class SpatailRouter {
       case Routs.routRegisterScreen:
         return MaterialPageRoute(builder: (_) => BlocProvider<AppRegisterCubit>(
           //create: (context) => AppRegisterCubit(),
-          create: (context) => getIt2<AppRegisterCubit>(),
+          create: (context) => AppRegisterCubit(),
           child: RegisterScreen()));
 
       case Routs.routForgetPasswordScreen:

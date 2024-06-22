@@ -6,7 +6,7 @@ class WeatherService {
   final Dio dio;
 
   WeatherService(this.dio);
-
+// http://api.weatherapi.com/v1/forecast.json?key=c9b78bcb02654430b9b180345232311&q=egypt
   final String baseUrl = 'http://api.weatherapi.com/v1';
   final String apiKey = 'c9b78bcb02654430b9b180345232311';
   Future<WeatherModle> getCurrentWeather({required String cityName}) async {

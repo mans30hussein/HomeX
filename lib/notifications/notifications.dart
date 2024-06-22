@@ -1,6 +1,8 @@
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'dart:math';
 
+import 'package:home_x/core/util/app_assets.dart';
+
 class LocalNotification {
   // setup
   static FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
@@ -22,7 +24,7 @@ class LocalNotification {
     );
   }
 
-  static void basicNotification() async {
+  static void basicNotification(String title, String body) async {
     // Notification details for Android
     final int notificationId = Random().nextInt(100000);
     NotificationDetails notificationDetails = const NotificationDetails(
@@ -36,110 +38,6 @@ class LocalNotification {
 
     // Displaying the notification
     flutterLocalNotificationsPlugin.show(
-        notificationId, 'basic', 'body', notificationDetails);
+        notificationId, title, body, notificationDetails);
   }
 }
-
-// import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-
-// class LocalNotification {
-//   static final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
-//       FlutterLocalNotificationsPlugin();
-
-//   // Initialization method
-//   static Future<void> init() async {
-//     const AndroidInitializationSettings initializationSettingsAndroid =
-//         AndroidInitializationSettings('@mipmap/ic_launcher');
-
-//     const DarwinInitializationSettings initializationSettingsIOS =
-//         DarwinInitializationSettings();
-
-//     const InitializationSettings initializationSettings = InitializationSettings(
-//       android: initializationSettingsAndroid,
-//       iOS: initializationSettingsIOS,
-//     );
-
-//     await flutterLocalNotificationsPlugin.initialize(
-//       initializationSettings,
-//       onDidReceiveNotificationResponse: onDidReceiveNotificationResponse,
-//       onDidReceiveBackgroundNotificationResponse: onDidReceiveBackgroundNotificationResponse,
-//     );
-//   }
-
-//   static void onDidReceiveNotificationResponse(
-//       NotificationResponse notificationResponse) {
-//     // Handle foreground notification response
-//   }
-
-//   static void onDidReceiveBackgroundNotificationResponse(
-//       NotificationResponse notificationResponse) {
-//     // Handle background notification response
-//   }
-
-//   static Future<void> basicNotification() async {
-//     const AndroidNotificationDetails androidPlatformChannelSpecifics =
-//         AndroidNotificationDetails(
-//       'channel_id',
-//       'channel_name',
-//       channelDescription: 'channel_description',
-//       importance: Importance.max,
-//       priority: Priority.high,
-//     );
-
-//     const NotificationDetails platformChannelSpecifics =
-//         NotificationDetails(android: androidPlatformChannelSpecifics);
-
-//     await flutterLocalNotificationsPlugin.show(
-//       0,
-//       'Warning',
-//       'Buzzer is ringing!!!',
-//       platformChannelSpecifics,
-//     );
-//   }
-// }
-// import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-
-// class LocalNotification {
-//   static FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
-//       FlutterLocalNotificationsPlugin();
-
-//   static Future<void> init() async {
-//     const AndroidInitializationSettings initializationSettingsAndroid =
-//         AndroidInitializationSettings('@mipmap/ic_launcher');
-//     const DarwinInitializationSettings initializationSettingsIOS =
-//         DarwinInitializationSettings();
-
-//     final InitializationSettings initializationSettings =
-//         InitializationSettings(
-//       android: initializationSettingsAndroid,
-//       iOS: initializationSettingsIOS,
-//     );
-
-//     await flutterLocalNotificationsPlugin.initialize(
-//       initializationSettings,
-//     );
-//   }
-
-//   static Future<void> action(NotificationResponse notificationResponse) async {
-//     // Handle notification tap
-//   }
-
-//   static void basicNotification() async {
-//     const AndroidNotificationDetails androidNotificationDetails =
-//         AndroidNotificationDetails(
-//       'id 1',
-//       'Basic notification',
-//     );
-
-//     const NotificationDetails notificationDetails = NotificationDetails(
-//       android: androidNotificationDetails,
-//     );
-
-//     await flutterLocalNotificationsPlugin.show(
-//       0,
-//       'basic',
-//       'body',
-//       notificationDetails,
-//     );
-//   }
-// }

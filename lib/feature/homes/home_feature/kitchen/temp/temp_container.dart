@@ -32,7 +32,8 @@ class _TempContainerState extends State<TempContainer> {
                 1); // Assuming that state 1 means true
             if (bazer) {
               print('Buzzer is active, sending notification');
-              LocalNotification.basicNotification();
+              LocalNotification.basicNotification(
+                  'Kitchen🔥', 'Kitchen temp is high');
             }
           }
 

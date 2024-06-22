@@ -32,7 +32,8 @@ class _GasContainerState extends State<GasContainer> {
                 1); // Assuming that state 1 means true
             if (bazer) {
               print('Buzzer is active, sending notification');
-              LocalNotification.basicNotification();
+              LocalNotification.basicNotification(
+                  'Bathroom ⛽', 'Bathroom gas leak detected');
             }
           }
           return Container(

@@ -47,8 +47,8 @@ class MyApp extends StatelessWidget {
         builder: (context, child) => MaterialApp(
           debugShowCheckedModeBanner: false,
 
-          home: Test(),
-          // initialRoute: Routs.routSplashScreen,
+         home: Test(),
+          initialRoute: Routs.routSplashScreen,
           // onGenerateRoute: SpatailRouter.generateRouts,
         ),
       ),
