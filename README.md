@@ -42,6 +42,19 @@ The system integrates hardware components with a mobile application to provide a
 - **REST / Real-time Communication**
 
 ---
+## 🧠 What I Learned
+ESP32 communication with mobile apps
+
+IoT system integration
+
+Real-time sensor data handling
+
+AI-based face recognition
+
+Firebase backend services
+
+Clean Architecture in Flutter
+
 
 ## 📂 Project Structure
 
@@ -61,16 +74,7 @@ lib/
 │   ├── widgets/
 │   └── themes/
 └── main.dart
+---
 
-# 🧠 What I Learned
-ESP32 communication with mobile apps
+# hj
 
-IoT system integration
-
-Real-time sensor data handling
-
-AI-based face recognition
-
-Firebase backend services
-
-Clean Architecture in Flutter
