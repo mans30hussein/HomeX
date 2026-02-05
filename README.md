@@ -1,17 +1,63 @@
-# home_x
+# 🏠 HomeX – Smart Home System
 
-A new Flutter project.
+HomeX is an **IoT-based Smart Home System** designed to monitor, control, and secure a home environment using real-time sensors and intelligent automation.
 
-## Getting Started
+The system integrates hardware components with a mobile application to provide a seamless smart living experience.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## 🚀 Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- 💡 **LED & Lighting Control**
+- 🌡️ **Temperature Monitoring**
+- ⛽ **Gas Leakage Detection**
+- 🌱 **Smart Irrigation System**
+  - Soil moisture sensing
+  - Automatic watering control
+- 📷 **ESP32-CAM Security System**
+  - AI-based face recognition
+  - Unauthorized access detection
+- 🔔 **Real-time Notifications**
+- 📱 **Mobile App Control Panel**
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# HomeX
+---
+
+## 🛠️ Tech Stack
+
+### Hardware
+- ESP32
+- ESP32-CAM
+- Temperature Sensor
+- Gas Sensor
+- Soil Moisture Sensor
+- Relay Modules
+
+### Software
+- **Flutter** (Mobile Application)
+- **Firebase**
+  - Authentication
+  - Firestore
+  - Cloud Messaging (Notifications)
+- **AI Model** for Face Recognition
+- **REST / Real-time Communication**
+
+---
+
+## 📂 Project Structure
+
+```text
+lib/
+├── core/
+│   ├── utils/
+│   ├── constants/
+│   └── services/
+├── features/
+│   ├── auth/
+│   ├── home_control/
+│   ├── sensors/
+│   ├── security/
+│   └── notifications/
+├── shared/
+│   ├── widgets/
+│   └── themes/
+└── main.dart
