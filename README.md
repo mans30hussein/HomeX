@@ -61,3 +61,16 @@ lib/
 │   ├── widgets/
 │   └── themes/
 └── main.dart
+
+# 🧠 What I Learned
+ESP32 communication with mobile apps
+
+IoT system integration
+
+Real-time sensor data handling
+
+AI-based face recognition
+
+Firebase backend services
+
+Clean Architecture in Flutter
