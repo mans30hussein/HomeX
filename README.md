@@ -43,9 +43,10 @@ The system integrates hardware components with a mobile application to provide a
 
 ---
 ## 🧠 What I Learned
-ESP32 communication with mobile apps
 
 IoT system integration
+
+ESP32 communication with mobile apps
 
 Real-time sensor data handling
 
@@ -74,7 +75,5 @@ lib/
 │   ├── widgets/
 │   └── themes/
 └── main.dart
----
 
-# hj
 
